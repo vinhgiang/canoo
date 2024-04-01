@@ -1,5 +1,6 @@
 import 'package:canoo/ui/app_theme.dart';
 import 'package:canoo/ui/views/pre_loader_view.dart';
+import 'package:canoo/ui/views/sponsorship_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: AppTheme.darkTheme,
-      home: PreLoaderView(),
+      home: SponsorshipView(),
     );
   }
 }

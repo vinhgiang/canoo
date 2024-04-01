@@ -70,6 +70,7 @@ flutter:
     - assets/images/logo-yellow-line.svg
     - assets/images/logo-yellow-line.png
     - assets/images/welcome-banner.png
+    - assets/images/sponsors/cibc-bell.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -82,12 +83,15 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
+  fonts:
+    - family: PPNeueMontreal
+      fonts:
+        - asset: assets/fonts/PPNeueMontreal-Regular.woff2
+          weight: 400
+        - asset: assets/fonts/PPNeueMontreal-Medium.woff2
+          weight: 500
+        - asset: assets/fonts/PPNeueMontreal-SemiBold.woff2
+          weight: 600
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
