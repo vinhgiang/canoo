@@ -16,12 +16,7 @@ class SponsorshipView extends StatelessWidget {
               semanticsLabel: 'Canada Logo',
             ),
             const SizedBox(height: 60),
-            const Text(
-              'sponsored by',
-              style: TextStyle(
-                fontWeight: FontWeight.w600,
-              ),
-            ),
+            const Text('sponsored by'),
             const SizedBox(height: 60),
             Image.asset('assets/images/sponsors/cibc-bell.png'),
             const RefreshProgressIndicator()

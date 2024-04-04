@@ -13,17 +13,22 @@ class AppTheme {
       textTheme: const TextTheme(
         bodySmall: TextStyle(
           fontFamily: 'PPNeueMontreal',
-          fontWeight: FontWeight.w400,
+          fontSize: 13,
+          fontWeight: FontWeight.w500,
         ),
         bodyMedium: TextStyle(
           fontFamily: 'PPNeueMontreal',
-          fontWeight: FontWeight.w400,
-          fontSize: 16,
+          fontSize: 15,
+          fontWeight: FontWeight.w500,
         ),
         bodyLarge: TextStyle(
           fontFamily: 'PPNeueMontreal',
-          fontWeight: FontWeight.w400,
+          fontWeight: FontWeight.w500,
         ),
+      ),
+      iconTheme: IconThemeData(
+        color: Colors.red,
+        size: 100,
       ),
     );
   }
