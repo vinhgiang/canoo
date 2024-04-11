@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class AppTheme {
   static ThemeData get darkTheme {
@@ -25,10 +24,6 @@ class AppTheme {
           fontFamily: 'PPNeueMontreal',
           fontWeight: FontWeight.w500,
         ),
-      ),
-      iconTheme: IconThemeData(
-        color: Colors.red,
-        size: 100,
       ),
     );
   }

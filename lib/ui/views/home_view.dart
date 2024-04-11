@@ -1,3 +1,4 @@
+import 'package:canoo/ui/views/widgets/bottom_navigator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -109,9 +110,15 @@ class _HomeViewState extends State<HomeView> {
           ),
         ],
       ),
-      body: Center(
-        child: Text('HOME'),
+      body: ListView.builder(
+        itemCount: 20,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text('Food ${index + 1}'),
+          );
+        },
       ),
+      bottomNavigationBar: BottomNavigator(),
     );
   }
 }
