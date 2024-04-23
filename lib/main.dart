@@ -13,14 +13,9 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Canoo',
       theme: AppTheme.darkTheme,
-      home: const SafeArea(
-        child: Padding(
-          padding: EdgeInsets.only(left: 10, right: 10),
-          child: HomeView(),
-        ),
-      ),
+      home: const HomeView(),
     );
   }
 }

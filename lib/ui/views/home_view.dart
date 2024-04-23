@@ -1,7 +1,7 @@
 import 'package:canoo/ui/views/widgets/bottom_navigator.dart';
+import 'package:canoo/ui/views/widgets/greeting.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 const List<String> _cities = <String>[
@@ -27,17 +27,13 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.background,
-        leadingWidth: 100,
-        leading: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SvgPicture.asset(
-              'assets/images/canoo.svg',
-              semanticsLabel: 'Canoo Logo',
-              width: 100,
-            ),
-            Expanded(
-              child: InkWell(
+        leadingWidth: 125,
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 10),
+          child: Column(
+            children: [
+              Image.asset('assets/images/canoo.png'),
+              InkWell(
                 onTap: () {
                   showCupertinoModalPopup(
                     context: context,
@@ -94,31 +90,39 @@ class _HomeViewState extends State<HomeView> {
                     ),
                   ],
                 ),
-              ),
-            ),
-          ],
+              )
+            ],
+          ),
         ),
         actions: [
-          IconButton(
-            icon: const Icon(FontAwesomeIcons.magnifyingGlass),
-            onPressed: () {},
-          ),
-          const SizedBox(width: 10),
-          Image.asset(
-            'assets/images/profile-picture.jpg',
-            width: 25,
-          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 10),
+            child: Row(
+              children: [
+                IconButton(
+                  icon: const Icon(FontAwesomeIcons.magnifyingGlass),
+                  onPressed: () {},
+                ),
+                const SizedBox(width: 10),
+                Image.asset(
+                  'assets/images/profile-picture.jpg',
+                  width: 25,
+                ),
+              ],
+            ),
+          )
         ],
       ),
-      body: ListView.builder(
-        itemCount: 20,
-        itemBuilder: (context, index) {
-          return ListTile(
-            title: Text('Food ${index + 1}'),
-          );
-        },
+      resizeToAvoidBottomInset: false,
+      body: const Padding(
+        padding: EdgeInsets.fromLTRB(10, 45, 10, 50),
+        child: Column(
+          children: [
+            Greeting(),
+          ],
+        ),
       ),
-      bottomNavigationBar: BottomNavigator(),
+      bottomNavigationBar: const BottomNavigator(),
     );
   }
 }

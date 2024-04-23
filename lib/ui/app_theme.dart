@@ -24,6 +24,10 @@ class AppTheme {
           fontFamily: 'PPNeueMontreal',
           fontWeight: FontWeight.w500,
         ),
+        headlineSmall: TextStyle(
+          fontFamily: 'PPNeueMontreal',
+          fontWeight: FontWeight.w600,
+        ),
       ),
     );
   }

@@ -47,6 +47,7 @@ class _BottomNavigatorState extends State<BottomNavigator> {
       currentIndex: _selectedIndex,
       type: BottomNavigationBarType.fixed,
       selectedFontSize: 0,
+      unselectedFontSize: 0,
       items: [
         BottomNavigationBarItem(
           icon: Container(
