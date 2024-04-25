@@ -74,6 +74,8 @@ flutter:
     - assets/images/profile-picture.jpg
     - assets/images/welcome-banner.png
     - assets/images/sponsors/cibc-bell.png
+    - assets/images/events/toronto-gone-wild.png
+    - assets/images/icons/tree.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

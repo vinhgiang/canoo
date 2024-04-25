@@ -5,15 +5,18 @@ class Greeting extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'hello, CAM VINH!',
-          style: Theme.of(context).textTheme.headlineSmall,
-        ),
-        const Text('Check out what is happening arround you'),
-      ],
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(10, 25, 10, 25),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'hello, CAM VINH!',
+            style: Theme.of(context).textTheme.headlineSmall,
+          ),
+          const Text('Check out what is happening arround you'),
+        ],
+      ),
     );
   }
 }
