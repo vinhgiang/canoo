@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.6
   flutter_svg: ^2.0.10+1
   font_awesome_flutter: ^10.7.0
+  intl: ^0.19.0
 
 dev_dependencies:
   flutter_test:
@@ -62,7 +63,6 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/arrow-white.svg
     - assets/images/canada.svg
     - assets/images/canoo.svg
     - assets/images/canoo.png
@@ -74,8 +74,20 @@ flutter:
     - assets/images/profile-picture.jpg
     - assets/images/welcome-banner.png
     - assets/images/sponsors/cibc-bell.png
+
+    - assets/icons/arrow-white.svg
+    - assets/icons/tree.svg
+    - assets/icons/gallery.svg
+    - assets/icons/music.svg
+    - assets/icons/film.svg
+    - assets/icons/community.svg
+
+    - assets/images/events/event.jpg
     - assets/images/events/toronto-gone-wild.png
-    - assets/images/icons/tree.svg
+    - assets/images/events/thursday-nights.jpg
+    - assets/images/events/apr-films.jpg
+    - assets/images/events/toronto_gone_wild_curator_tours.png
+    - assets/images/events/7-elegant-fire-1.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -1,12 +1,38 @@
+import 'package:canoo/data/dummy.dart';
+import 'package:canoo/directories/category.dart';
+import 'package:canoo/ui/views/widgets/slider/horizontal_slider.dart';
+import 'package:canoo/ui/views/widgets/slider/slider_item.dart';
+import 'package:canoo/utils/Utils.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:intl/intl.dart';
 
 class OnThisWeek extends StatelessWidget {
   const OnThisWeek({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final List<SliderItem> items = onThisWeekEvents.map((event) {
+      final String provinceShort =
+          Utils.getProvinceShortForm(event.address.province);
+
+      String date = DateFormat("dd MMM, h:mm a").format(event.startDate);
+      if (event.endDate != null) {
+        final DateFormat dateFormat = DateFormat("dd MMM ''yy");
+        date =
+            '${dateFormat.format(event.startDate)} - ${dateFormat.format(event.endDate!)}';
+      }
+
+      return SliderItem(
+        name: event.name,
+        thumbnail: event.thumbnail!,
+        address: '${event.address.city} , $provinceShort',
+        category: event.category,
+        date: date,
+        icon: CategoryIcon.icons[event.category]!,
+      );
+    }).toList();
+
     return Column(
       children: [
         Container(
@@ -33,73 +59,8 @@ class OnThisWeek extends StatelessWidget {
             ],
           ),
         ),
-        Container(
-          color: Colors.white10,
-          padding: const EdgeInsets.fromLTRB(0, 0, 0, 20),
-          child: SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                for (int i = 0; i < 5; i++)
-                  Container(
-                    margin: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-                    width: 175,
-                    child: Column(
-                      children: [
-                        Stack(
-                          children: [
-                            Image.asset(
-                              'assets/images/events/toronto-gone-wild.png',
-                            ),
-                            Positioned(
-                              top: 0,
-                              left: 0,
-                              child: Container(
-                                width: 30,
-                                height: 30,
-                                padding: const EdgeInsets.all(5),
-                                color: Colors.green,
-                                child: SvgPicture.asset(
-                                  'assets/images/icons/tree.svg',
-                                  semanticsLabel: 'Tree',
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                        const SizedBox(height: 5),
-                        Text(
-                          'Toronto Gone Wild: City Meets Nature at The Museums of Toronto',
-                          style: Theme.of(context).textTheme.titleMedium,
-                        ),
-                        const SizedBox(height: 5),
-                        Row(
-                          children: [
-                            const Icon(Icons.calendar_today_outlined),
-                            const SizedBox(width: 5),
-                            Text(
-                              "10 Apr '24 - 3 Aug '24",
-                              style: Theme.of(context).textTheme.bodySmall,
-                            )
-                          ],
-                        ),
-                        const SizedBox(height: 10),
-                        Row(
-                          children: [
-                            const Icon(Icons.location_on_rounded),
-                            const SizedBox(width: 5),
-                            Text(
-                              'Toronto, ON',
-                              style: Theme.of(context).textTheme.bodySmall,
-                            )
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-              ],
-            ),
-          ),
+        HorizontalSlider(
+          items: items,
         ),
       ],
     );
