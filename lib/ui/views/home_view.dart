@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'widgets/on_this_week.dart';
+import 'widgets/advertisement_slider.dart';
 
 const List<String> _cities = <String>[
   'Toronto',
@@ -116,15 +117,18 @@ class _HomeViewState extends State<HomeView> {
         ],
       ),
       resizeToAvoidBottomInset: false,
-      body: const Padding(
-        padding: EdgeInsets.fromLTRB(0, 25, 0, 0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Greeting(),
-            OnThisWeek(),
-          ],
+      body: const SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.fromLTRB(0, 25, 0, 0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Greeting(),
+              OnThisWeek(),
+              AdvertisementSlider(),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: const BottomNavigator(),

@@ -1,5 +1,6 @@
 import 'package:canoo/directories/category.dart';
 import 'package:canoo/models/address.dart';
+import 'package:canoo/models/banner.dart' as canoo_banner;
 import 'package:canoo/models/event.dart';
 import 'package:flutter/material.dart';
 
@@ -79,5 +80,20 @@ List<Event> onThisWeekEvents = [
       country: 'Canada',
     ),
     category: Category.art,
+  ),
+];
+
+List<canoo_banner.Banner> homeBanners = [
+  canoo_banner.Banner(
+    name: 'CIBC 1',
+    image: 'assets/images/banners/cibc-1.png',
+  ),
+  canoo_banner.Banner(
+    name: 'Virgin',
+    image: 'assets/images/banners/virgin.png',
+  ),
+  canoo_banner.Banner(
+    name: 'CIBC 2',
+    image: 'assets/images/banners/cibc-2.png',
   ),
 ];

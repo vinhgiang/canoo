@@ -38,6 +38,7 @@ dependencies:
   flutter_svg: ^2.0.10+1
   font_awesome_flutter: ^10.7.0
   intl: ^0.19.0
+  carousel_slider: ^4.2.1
 
 dev_dependencies:
   flutter_test:
@@ -74,6 +75,10 @@ flutter:
     - assets/images/profile-picture.jpg
     - assets/images/welcome-banner.png
     - assets/images/sponsors/cibc-bell.png
+
+    - assets/images/banners/cibc-1.png
+    - assets/images/banners/cibc-2.png
+    - assets/images/banners/virgin.png
 
     - assets/icons/arrow-white.svg
     - assets/icons/tree.svg
