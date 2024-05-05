@@ -23,7 +23,7 @@ class SliderItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+      margin: const EdgeInsets.fromLTRB(10, 0, 5, 0),
       width: 175,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

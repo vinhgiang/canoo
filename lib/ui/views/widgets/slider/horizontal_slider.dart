@@ -2,7 +2,7 @@ import 'package:canoo/ui/views/widgets/slider/slider_item.dart';
 import 'package:flutter/material.dart';
 
 class HorizontalSlider extends StatelessWidget {
-  final List<SliderItem> items;
+  final List<Widget> items;
 
   const HorizontalSlider({
     super.key,

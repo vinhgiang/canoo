@@ -1,4 +1,5 @@
 import 'package:canoo/ui/views/widgets/bottom_navigator.dart';
+import 'package:canoo/ui/views/widgets/explore.dart';
 import 'package:canoo/ui/views/widgets/greeting.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -127,6 +128,7 @@ class _HomeViewState extends State<HomeView> {
               Greeting(),
               OnThisWeek(),
               AdvertisementSlider(),
+              Explore(),
             ],
           ),
         ),
