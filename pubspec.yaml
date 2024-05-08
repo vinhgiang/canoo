@@ -86,6 +86,8 @@ flutter:
     - assets/icons/music.svg
     - assets/icons/film.svg
     - assets/icons/community.svg
+    - assets/icons/museum.svg
+    - assets/icons/science-centre.svg
 
     - assets/images/events/event.jpg
     - assets/images/events/toronto-gone-wild.png
@@ -95,6 +97,9 @@ flutter:
     - assets/images/events/7-elegant-fire-1.jpg
 
     - assets/images/places/hangar-flight-museum.jpg
+    - assets/images/places/contemporary.jpg
+    - assets/images/places/telus-spark-6d.jpg
+    - assets/images/places/studio-bell.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

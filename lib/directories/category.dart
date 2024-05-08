@@ -5,6 +5,8 @@ enum Category {
   music,
   film,
   networking,
+  museum,
+  science,
 }
 
 class CategoryIcon {
@@ -24,6 +26,14 @@ class CategoryIcon {
     Category.networking: SvgPicture.asset(
       'assets/icons/community.svg',
       semanticsLabel: 'Networking',
+    ),
+    Category.museum: SvgPicture.asset(
+      'assets/icons/museum.svg',
+      semanticsLabel: 'Museum',
+    ),
+    Category.science: SvgPicture.asset(
+      'assets/icons/science-centre.svg',
+      semanticsLabel: 'Science',
     ),
   };
 }

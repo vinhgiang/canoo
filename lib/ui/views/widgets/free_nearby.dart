@@ -17,13 +17,13 @@ class FreeNearby extends StatelessWidget {
           height: 220,
         ),
         address: 'Calgary, AB',
-        category: Category.art,
-        icon: CategoryIcon.icons[Category.art]!,
+        category: Category.museum,
+        icon: CategoryIcon.icons[Category.museum]!,
       ),
       SliderItem(
-        name: 'The Hanger Flight Museum',
+        name: 'Contemporary Calgary',
         thumbnail: Image.asset(
-          'assets/images/places/hangar-flight-museum.jpg',
+          'assets/images/places/contemporary.jpg',
           fit: BoxFit.cover,
           height: 220,
         ),
@@ -32,15 +32,26 @@ class FreeNearby extends StatelessWidget {
         icon: CategoryIcon.icons[Category.art]!,
       ),
       SliderItem(
-        name: 'The Hanger Flight Museum',
+        name: 'Telus Spark Science Centre',
         thumbnail: Image.asset(
-          'assets/images/places/hangar-flight-museum.jpg',
+          'assets/images/places/telus-spark-6d.jpg',
           fit: BoxFit.cover,
           height: 220,
         ),
         address: 'Calgary, AB',
-        category: Category.art,
-        icon: CategoryIcon.icons[Category.art]!,
+        category: Category.science,
+        icon: CategoryIcon.icons[Category.science]!,
+      ),
+      SliderItem(
+        name: 'Studio Bell, home of the National Music Centre',
+        thumbnail: Image.asset(
+          'assets/images/places/studio-bell.jpg',
+          fit: BoxFit.cover,
+          height: 220,
+        ),
+        address: 'Calgary, AB',
+        category: Category.museum,
+        icon: CategoryIcon.icons[Category.museum]!,
       ),
     ];
 
