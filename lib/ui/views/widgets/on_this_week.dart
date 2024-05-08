@@ -62,6 +62,7 @@ class OnThisWeek extends StatelessWidget {
             ),
           ),
           HorizontalSlider(
+            backgroundColor: Colors.white10,
             items: items,
           ),
         ],
