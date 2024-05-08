@@ -94,6 +94,8 @@ flutter:
     - assets/images/events/toronto_gone_wild_curator_tours.png
     - assets/images/events/7-elegant-fire-1.jpg
 
+    - assets/images/places/hangar-flight-museum.jpg
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

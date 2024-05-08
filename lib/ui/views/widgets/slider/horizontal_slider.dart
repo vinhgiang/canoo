@@ -1,4 +1,3 @@
-import 'package:canoo/ui/views/widgets/slider/slider_item.dart';
 import 'package:flutter/material.dart';
 
 class HorizontalSlider extends StatelessWidget {

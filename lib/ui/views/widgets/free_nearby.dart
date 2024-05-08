@@ -1,0 +1,84 @@
+import 'package:canoo/directories/category.dart';
+import 'package:canoo/ui/views/widgets/slider/horizontal_slider.dart';
+import 'package:canoo/ui/views/widgets/slider/slider_item.dart';
+import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+class FreeNearby extends StatelessWidget {
+  const FreeNearby({super.key});
+
+  List<SliderItem> getSliderItem() {
+    List<SliderItem> items = [
+      SliderItem(
+        name: 'The Hanger Flight Museum',
+        thumbnail: Image.asset(
+          'assets/images/places/hangar-flight-museum.jpg',
+          fit: BoxFit.cover,
+          height: 220,
+        ),
+        address: 'Calgary, AB',
+        category: Category.art,
+        icon: CategoryIcon.icons[Category.art]!,
+      ),
+      SliderItem(
+        name: 'The Hanger Flight Museum',
+        thumbnail: Image.asset(
+          'assets/images/places/hangar-flight-museum.jpg',
+          fit: BoxFit.cover,
+          height: 220,
+        ),
+        address: 'Calgary, AB',
+        category: Category.art,
+        icon: CategoryIcon.icons[Category.art]!,
+      ),
+      SliderItem(
+        name: 'The Hanger Flight Museum',
+        thumbnail: Image.asset(
+          'assets/images/places/hangar-flight-museum.jpg',
+          fit: BoxFit.cover,
+          height: 220,
+        ),
+        address: 'Calgary, AB',
+        category: Category.art,
+        icon: CategoryIcon.icons[Category.art]!,
+      ),
+    ];
+
+    return items;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 10, bottom: 10),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Text(
+                'free nearby',
+                style: Theme.of(context).textTheme.headlineLarge,
+              ),
+              const Row(
+                children: [
+                  Text('View all'),
+                  SizedBox(width: 5),
+                  Icon(
+                    FontAwesomeIcons.chevronRight,
+                    size: 12,
+                  ),
+                ],
+              )
+            ],
+          ),
+          const SizedBox(height: 25),
+          HorizontalSlider(
+            items: getSliderItem(),
+          ),
+        ],
+      ),
+    );
+  }
+}

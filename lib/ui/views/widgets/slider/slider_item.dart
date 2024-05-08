@@ -5,19 +5,21 @@ import 'package:flutter_svg/svg.dart';
 class SliderItem extends StatelessWidget {
   final String name;
   final Image thumbnail;
-  final String address;
   final Category category;
-  final String date;
   final SvgPicture icon;
+  final String? address;
+  final String? date;
+  final String? description;
 
   const SliderItem({
     super.key,
     required this.name,
     required this.thumbnail,
-    required this.address,
     required this.category,
-    required this.date,
     required this.icon,
+    this.address,
+    this.description,
+    this.date,
   });
 
   @override
@@ -49,28 +51,32 @@ class SliderItem extends StatelessWidget {
             name,
             style: Theme.of(context).textTheme.titleMedium,
           ),
-          const SizedBox(height: 5),
-          Row(
-            children: [
-              const Icon(Icons.calendar_today_outlined),
-              const SizedBox(width: 5),
-              Text(
-                date,
-                style: Theme.of(context).textTheme.bodySmall,
-              )
-            ],
-          ),
-          const SizedBox(height: 10),
-          Row(
-            children: [
-              const Icon(Icons.location_on_rounded),
-              const SizedBox(width: 5),
-              Text(
-                address,
-                style: Theme.of(context).textTheme.bodySmall,
-              )
-            ],
-          )
+          if (date != null) ...[
+            const SizedBox(height: 5),
+            Row(
+              children: [
+                const Icon(Icons.calendar_today_outlined),
+                const SizedBox(width: 5),
+                Text(
+                  date!,
+                  style: Theme.of(context).textTheme.bodySmall,
+                )
+              ],
+            ),
+          ],
+          if (address != null) ...[
+            const SizedBox(height: 10),
+            Row(
+              children: [
+                const Icon(Icons.location_on_rounded),
+                const SizedBox(width: 5),
+                Text(
+                  address!,
+                  style: Theme.of(context).textTheme.bodySmall,
+                )
+              ],
+            ),
+          ],
         ],
       ),
     );
