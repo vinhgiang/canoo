@@ -79,6 +79,8 @@ flutter:
     - assets/images/banners/cibc-1.png
     - assets/images/banners/cibc-2.png
     - assets/images/banners/virgin.png
+    - assets/images/banners/settlement-agency.jpg
+    - assets/images/banners/donate.jpg
 
     - assets/icons/arrow-white.svg
     - assets/icons/tree.svg
@@ -88,6 +90,12 @@ flutter:
     - assets/icons/community.svg
     - assets/icons/museum.svg
     - assets/icons/science-centre.svg
+    - assets/icons/bank.svg
+    - assets/icons/mobile.svg
+    - assets/icons/subscription.svg
+    - assets/icons/train.svg
+    - assets/icons/education.svg
+    - assets/icons/outdoor.svg
 
     - assets/images/events/event.jpg
     - assets/images/events/toronto-gone-wild.png
@@ -95,11 +103,20 @@ flutter:
     - assets/images/events/apr-films.jpg
     - assets/images/events/toronto_gone_wild_curator_tours.png
     - assets/images/events/7-elegant-fire-1.jpg
+    - assets/images/events/highlighted.png
 
     - assets/images/places/hangar-flight-museum.jpg
     - assets/images/places/contemporary.jpg
     - assets/images/places/telus-spark-6d.jpg
     - assets/images/places/studio-bell.jpg
+
+    - assets/images/deals/50-off-via-rail.jpg
+    - assets/images/deals/bow-habitat.jpg
+    - assets/images/deals/CIBC.png
+    - assets/images/deals/horse-trail-rides.jpg
+    - assets/images/deals/national-post.jpg
+    - assets/images/deals/roam.png
+    - assets/images/deals/virgin-offer.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

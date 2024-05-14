@@ -77,6 +77,13 @@ class SliderItem extends StatelessWidget {
               ],
             ),
           ],
+          if (description != null) ...[
+            const SizedBox(height: 10),
+            Text(
+              description!,
+              style: Theme.of(context).textTheme.bodySmall,
+            ),
+          ],
         ],
       ),
     );

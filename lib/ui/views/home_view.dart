@@ -1,11 +1,14 @@
 import 'package:canoo/ui/views/widgets/bottom_navigator.dart';
+import 'package:canoo/ui/views/widgets/deals.dart';
 import 'package:canoo/ui/views/widgets/explore.dart';
 import 'package:canoo/ui/views/widgets/free_nearby.dart';
 import 'package:canoo/ui/views/widgets/greeting.dart';
+import 'package:canoo/ui/views/widgets/highlight_event.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../../data/dummy.dart';
 import 'widgets/on_this_week.dart';
 import 'widgets/advertisement_slider.dart';
 
@@ -119,18 +122,21 @@ class _HomeViewState extends State<HomeView> {
         ],
       ),
       resizeToAvoidBottomInset: false,
-      body: const SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.fromLTRB(0, 25, 0, 0),
+          padding: const EdgeInsets.fromLTRB(0, 25, 0, 0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Greeting(),
-              OnThisWeek(),
-              AdvertisementSlider(),
-              Explore(),
-              FreeNearby(),
+              const Greeting(),
+              const OnThisWeek(),
+              AdvertisementSlider(banners: homeBanners),
+              const Explore(),
+              const FreeNearby(),
+              AdvertisementSlider(banners: homeBanners2),
+              const Deals(),
+              const HighlightEvent()
             ],
           ),
         ),

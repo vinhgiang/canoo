@@ -1,15 +1,17 @@
-import 'package:canoo/data/dummy.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:canoo/models/banner.dart' as canoo_banner;
 
 class AdvertisementSlider extends StatelessWidget {
-  const AdvertisementSlider({super.key});
+  final List<canoo_banner.Banner> banners;
+
+  const AdvertisementSlider({
+    super.key,
+    required this.banners,
+  });
 
   @override
   Widget build(BuildContext context) {
-    final List<canoo_banner.Banner> banners = homeBanners;
-
     return Padding(
       padding: const EdgeInsets.only(top: 30),
       child: CarouselSlider(
