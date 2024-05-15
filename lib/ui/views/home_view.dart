@@ -1,4 +1,5 @@
 import 'package:canoo/ui/views/widgets/bottom_navigator.dart';
+import 'package:canoo/ui/views/widgets/curated_for_you.dart';
 import 'package:canoo/ui/views/widgets/deals.dart';
 import 'package:canoo/ui/views/widgets/explore.dart';
 import 'package:canoo/ui/views/widgets/free_nearby.dart';
@@ -136,7 +137,8 @@ class _HomeViewState extends State<HomeView> {
               const FreeNearby(),
               AdvertisementSlider(banners: homeBanners2),
               const Deals(),
-              const HighlightEvent()
+              const HighlightEvent(),
+              const CuratedForYou(),
             ],
           ),
         ),

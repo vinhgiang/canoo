@@ -81,6 +81,8 @@ flutter:
     - assets/images/banners/virgin.png
     - assets/images/banners/settlement-agency.jpg
     - assets/images/banners/donate.jpg
+    - assets/images/banners/summer-rockies.jpg
+    - assets/images/banners/canada-culture.jpg
 
     - assets/icons/arrow-white.svg
     - assets/icons/tree.svg
