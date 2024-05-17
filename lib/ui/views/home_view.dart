@@ -5,6 +5,7 @@ import 'package:canoo/ui/views/widgets/explore.dart';
 import 'package:canoo/ui/views/widgets/free_nearby.dart';
 import 'package:canoo/ui/views/widgets/greeting.dart';
 import 'package:canoo/ui/views/widgets/highlight_event.dart';
+import 'package:canoo/ui/views/widgets/share/call_to_action.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -139,6 +140,25 @@ class _HomeViewState extends State<HomeView> {
               const Deals(),
               const HighlightEvent(),
               const CuratedForYou(),
+              const CallToAction(
+                title: 'Canoo\ninto\nCanada',
+                description:
+                    'There are thousands more offers for you to discover',
+              ),
+            ],
+          ),
+        ),
+      ),
+      floatingActionButton: SizedBox(
+        width: 150,
+        child: ElevatedButton(
+          onPressed: () {},
+          child: const Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.map_outlined, size: 20),
+              SizedBox(width: 10),
+              Text('Map View'),
             ],
           ),
         ),
