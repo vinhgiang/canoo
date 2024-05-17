@@ -1,3 +1,4 @@
+import 'package:canoo/services/navigation_service.dart';
 import 'package:canoo/ui/views/widgets/bottom_navigator.dart';
 import 'package:canoo/ui/views/widgets/curated_for_you.dart';
 import 'package:canoo/ui/views/widgets/deals.dart';
@@ -114,9 +115,14 @@ class _HomeViewState extends State<HomeView> {
                   onPressed: () {},
                 ),
                 const SizedBox(width: 10),
-                Image.asset(
-                  'assets/images/profile-picture.jpg',
-                  width: 25,
+                InkWell(
+                  onTap: () {
+                    NavigationService().navigateTo('/profile');
+                  },
+                  child: Image.asset(
+                    'assets/images/profile-picture.jpg',
+                    width: 25,
+                  ),
                 ),
               ],
             ),
