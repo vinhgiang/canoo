@@ -4,24 +4,26 @@ class AppTheme {
   static ThemeData get darkTheme {
     return ThemeData(
       brightness: Brightness.dark,
-      colorScheme: ColorScheme.fromSwatch(
-        brightness: Brightness.dark,
-        primarySwatch: Colors.yellow,
-        backgroundColor: Colors.black,
-      ),
-      // colorScheme: const ColorScheme(
-      //   primary: Colors.yellow,
+      // colorScheme: ColorScheme.fromSwatch(
       //   brightness: Brightness.dark,
-      //   background: Colors.black,
-      //   onPrimary: Colors.black,
-      //   secondary: Colors.grey,
-      //   onSecondary: Colors.white,
-      //   error: Colors.red,
-      //   onError: Colors.white,
-      //   onBackground: Colors.white10,
-      //   surface: Colors.white,
-      //   onSurface: Colors.white,
+      //   primarySwatch: Colors.yellow,
+      //   backgroundColor: Colors.black,
       // ),
+      colorScheme: const ColorScheme(
+        brightness: Brightness.dark,
+        background: Colors.black,
+        onBackground: Colors.white10,
+        primary: Colors.yellow,
+        onPrimary: Colors.black,
+        secondary: Colors.grey,
+        onSecondary: Colors.white,
+        tertiary: Color.fromRGBO(255, 188, 53, 1),
+        onTertiary: Colors.black,
+        error: Colors.red,
+        onError: Colors.white,
+        surface: Colors.white,
+        onSurface: Colors.white,
+      ),
       iconTheme: const IconThemeData(
         size: 13,
         color: Colors.grey,

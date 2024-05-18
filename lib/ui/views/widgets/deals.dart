@@ -12,7 +12,7 @@ class Deals extends StatelessWidget {
     return SliderSection(
       title: 'deals',
       slider: HorizontalSlider(
-        backgroundColor: Colors.white10,
+        backgroundColor: Theme.of(context).colorScheme.onBackground,
         items: deals,
       ),
     );

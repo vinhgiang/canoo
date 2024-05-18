@@ -19,7 +19,7 @@ class SliderSection extends StatelessWidget {
         children: [
           Container(
             padding: const EdgeInsets.fromLTRB(10, 25, 10, 25),
-            color: Colors.white10,
+            color: Theme.of(context).colorScheme.onBackground,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.end,

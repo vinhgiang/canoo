@@ -63,7 +63,7 @@ class FreeNearby extends StatelessWidget {
     return SliderSection(
       title: 'free nearby',
       slider: HorizontalSlider(
-        backgroundColor: Colors.white10,
+        backgroundColor: Theme.of(context).colorScheme.onBackground,
         items: getSliderItem(),
       ),
     );

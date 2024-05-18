@@ -36,7 +36,7 @@ class OnThisWeek extends StatelessWidget {
     return SliderSection(
       title: "what's on \nthis week",
       slider: HorizontalSlider(
-        backgroundColor: Colors.white10,
+        backgroundColor: Theme.of(context).colorScheme.onBackground,
         items: items,
       ),
     );

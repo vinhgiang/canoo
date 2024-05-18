@@ -10,7 +10,7 @@ class CuratedForYou extends StatelessWidget {
     return SliderSection(
       title: 'curated for \nyou',
       slider: HorizontalSlider(
-        backgroundColor: Colors.white10,
+        backgroundColor: Theme.of(context).colorScheme.onBackground,
         items: [
           Container(
             width: MediaQuery.of(context).size.width * 0.75,
