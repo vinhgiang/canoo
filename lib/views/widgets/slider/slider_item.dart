@@ -49,7 +49,7 @@ class SliderItem extends StatelessWidget {
           const SizedBox(height: 5),
           Text(
             name,
-            style: Theme.of(context).textTheme.titleMedium,
+            style: Theme.of(context).textTheme.titleSmall,
           ),
           if (date != null) ...[
             const SizedBox(height: 5),

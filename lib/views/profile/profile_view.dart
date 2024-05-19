@@ -1,3 +1,4 @@
+import 'package:canoo/views/profile/widgets/profile_overview.dart';
 import 'package:canoo/views/widgets/share/back_arrow.dart';
 import 'package:flutter/material.dart';
 
@@ -13,8 +14,10 @@ class ProfileView extends StatelessWidget {
           color: Theme.of(context).colorScheme.onTertiary,
         ),
       ),
-      body: const Center(
-        child: Text('Profile'),
+      body: const Column(
+        children: [
+          ProfileOverView(),
+        ],
       ),
     );
   }

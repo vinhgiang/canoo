@@ -85,6 +85,7 @@ flutter:
     - assets/images/banners/canada-culture.jpg
 
     - assets/icons/arrow-white.svg
+    - assets/icons/arrow-right.svg
     - assets/icons/tree.svg
     - assets/icons/gallery.svg
     - assets/icons/music.svg

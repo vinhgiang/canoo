@@ -43,10 +43,11 @@ class Explore extends StatelessWidget {
                       padding: const EdgeInsets.all(9),
                       child: Text(
                         'Latest \nDeals',
-                        style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                              color: Colors.black,
-                              fontWeight: FontWeight.w700,
-                            ),
+                        style:
+                            Theme.of(context).textTheme.titleMedium!.copyWith(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w700,
+                                ),
                       ),
                     )
                   ],
@@ -74,10 +75,11 @@ class Explore extends StatelessWidget {
                       padding: const EdgeInsets.all(9),
                       child: Text(
                         'Volunterring \nOppotunities',
-                        style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                              color: Colors.black,
-                              fontWeight: FontWeight.w700,
-                            ),
+                        style:
+                            Theme.of(context).textTheme.titleMedium!.copyWith(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w700,
+                                ),
                       ),
                     )
                   ],
@@ -105,10 +107,11 @@ class Explore extends StatelessWidget {
                       padding: const EdgeInsets.all(9),
                       child: Text(
                         'Popular \nPlaces',
-                        style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                              color: Colors.black,
-                              fontWeight: FontWeight.w700,
-                            ),
+                        style:
+                            Theme.of(context).textTheme.titleMedium!.copyWith(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w700,
+                                ),
                       ),
                     )
                   ],
@@ -136,10 +139,11 @@ class Explore extends StatelessWidget {
                       padding: const EdgeInsets.all(9),
                       child: Text(
                         'Events on \nNow',
-                        style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                              color: Colors.black,
-                              fontWeight: FontWeight.w700,
-                            ),
+                        style:
+                            Theme.of(context).textTheme.titleMedium!.copyWith(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w700,
+                                ),
                       ),
                     )
                   ],
