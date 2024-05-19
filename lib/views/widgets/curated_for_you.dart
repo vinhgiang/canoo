@@ -1,5 +1,5 @@
-import 'package:canoo/ui/views/widgets/share/slider_section.dart';
-import 'package:canoo/ui/views/widgets/slider/horizontal_slider.dart';
+import 'package:canoo/views/widgets/share/slider_section.dart';
+import 'package:canoo/views/widgets/slider/horizontal_slider.dart';
 import 'package:flutter/material.dart';
 
 class CuratedForYou extends StatelessWidget {

@@ -1,4 +1,4 @@
-import 'package:canoo/ui/views/widgets/share/back_arrow.dart';
+import 'package:canoo/views/widgets/share/back_arrow.dart';
 import 'package:flutter/material.dart';
 
 class ProfileView extends StatelessWidget {

@@ -1,17 +1,17 @@
 import 'package:canoo/services/navigation_service.dart';
-import 'package:canoo/ui/views/widgets/bottom_navigator.dart';
-import 'package:canoo/ui/views/widgets/curated_for_you.dart';
-import 'package:canoo/ui/views/widgets/deals.dart';
-import 'package:canoo/ui/views/widgets/explore.dart';
-import 'package:canoo/ui/views/widgets/free_nearby.dart';
-import 'package:canoo/ui/views/widgets/greeting.dart';
-import 'package:canoo/ui/views/widgets/highlight_event.dart';
-import 'package:canoo/ui/views/widgets/share/call_to_action.dart';
+import 'package:canoo/views/widgets/bottom_navigator.dart';
+import 'package:canoo/views/widgets/curated_for_you.dart';
+import 'package:canoo/views/widgets/deals.dart';
+import 'package:canoo/views/widgets/explore.dart';
+import 'package:canoo/views/widgets/free_nearby.dart';
+import 'package:canoo/views/widgets/greeting.dart';
+import 'package:canoo/views/widgets/highlight_event.dart';
+import 'package:canoo/views/widgets/share/call_to_action.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../../data/dummy.dart';
+import '../data/dummy.dart';
 import 'widgets/on_this_week.dart';
 import 'widgets/advertisement_slider.dart';
 

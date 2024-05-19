@@ -1,8 +1,8 @@
 import 'package:canoo/data/dummy.dart';
 import 'package:canoo/directories/category.dart';
-import 'package:canoo/ui/views/widgets/share/slider_section.dart';
-import 'package:canoo/ui/views/widgets/slider/horizontal_slider.dart';
-import 'package:canoo/ui/views/widgets/slider/slider_item.dart';
+import 'package:canoo/views/widgets/share/slider_section.dart';
+import 'package:canoo/views/widgets/slider/horizontal_slider.dart';
+import 'package:canoo/views/widgets/slider/slider_item.dart';
 import 'package:canoo/utils/Utils.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';

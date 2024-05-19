@@ -2,7 +2,7 @@ import 'package:canoo/directories/category.dart';
 import 'package:canoo/models/address.dart';
 import 'package:canoo/models/banner.dart' as canoo_banner;
 import 'package:canoo/models/event.dart';
-import 'package:canoo/ui/views/widgets/slider/slider_item.dart';
+import 'package:canoo/views/widgets/slider/slider_item.dart';
 import 'package:flutter/material.dart';
 
 List<Event> onThisWeekEvents = [

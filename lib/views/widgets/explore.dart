@@ -1,4 +1,4 @@
-import 'package:canoo/ui/views/widgets/slider/horizontal_slider.dart';
+import 'package:canoo/views/widgets/slider/horizontal_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 

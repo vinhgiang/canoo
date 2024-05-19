@@ -1,7 +1,7 @@
 import 'package:canoo/services/navigation_service.dart';
-import 'package:canoo/ui/app_theme.dart';
-import 'package:canoo/ui/views/home_view.dart';
-import 'package:canoo/ui/views/profile_view.dart';
+import 'package:canoo/theme/app_theme.dart';
+import 'package:canoo/views/home_view.dart';
+import 'package:canoo/views/profile_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
