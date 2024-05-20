@@ -77,6 +77,11 @@ class AppTheme {
           fontSize: 19,
           height: 1,
         ),
+        labelSmall: TextStyle(
+          fontFamily: 'PPNeueMontreal',
+          fontSize: 16,
+          color: Colors.grey,
+        ),
       ),
       iconButtonTheme: IconButtonThemeData(
         style: ButtonStyle(
