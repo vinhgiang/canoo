@@ -15,11 +15,30 @@ class ProfileView extends StatelessWidget {
           color: Theme.of(context).colorScheme.onTertiary,
         ),
       ),
-      body: const Column(
+      body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          ProfileOverView(),
-          ProfileDetail(),
+          const ProfileOverView(),
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const ProfileDetail(),
+                SafeArea(
+                  child: SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(35, 0, 35, 0),
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: const Text('Logout'),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );
