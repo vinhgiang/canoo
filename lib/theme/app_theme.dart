@@ -17,8 +17,10 @@ class AppTheme {
         onTertiary: Colors.black,
         error: Colors.red,
         onError: Colors.white,
-        surface: Colors.white,
+        surface: Colors.black,
+        inverseSurface: Colors.white,
         onSurface: Colors.white,
+        onInverseSurface: Colors.black,
         outline: Color.fromRGBO(221, 164, 48, 1),
       ),
       iconTheme: const IconThemeData(

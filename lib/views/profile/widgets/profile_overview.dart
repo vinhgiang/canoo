@@ -1,8 +1,21 @@
+import 'package:canoo/views/profile/widgets/benefits_detail.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class ProfileOverView extends StatelessWidget {
   const ProfileOverView({super.key});
+
+  void _showBenefits(BuildContext context) {
+    showModalBottomSheet(
+      useSafeArea: true,
+      isScrollControlled: true,
+      context: context,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.zero,
+      ),
+      builder: (ctx) => const BenefitsDetail(),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -116,7 +129,9 @@ class ProfileOverView extends StatelessWidget {
                   ),
                   const SizedBox(width: 5),
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      _showBenefits(context);
+                    },
                     icon: SvgPicture.asset(
                       'assets/icons/arrow-right.svg',
                     ),
