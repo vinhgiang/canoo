@@ -46,28 +46,34 @@ class ProfileOverView extends StatelessWidget {
                   ),
                 ],
               ),
-              Container(
-                width: 125,
-                color: Theme.of(context).colorScheme.onTertiaryContainer,
-                padding: const EdgeInsets.only(top: 10),
-                child: Column(
-                  children: [
-                    Text(
-                      'YEAR',
-                      style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                            color: Theme.of(context)
-                                .colorScheme
-                                .onTertiary
-                                .withOpacity(0.5),
-                            fontWeight: FontWeight.w600,
-                          ),
-                    ),
-                    Text(
-                      '1',
-                      style: Theme.of(context).textTheme.displaySmall!.copyWith(
-                          color: Theme.of(context).colorScheme.onTertiary),
-                    ),
-                  ],
+              const SizedBox(width: 35),
+              Expanded(
+                child: Container(
+                  color: Theme.of(context).colorScheme.onTertiaryContainer,
+                  padding: const EdgeInsets.only(top: 10),
+                  child: Column(
+                    children: [
+                      Text(
+                        'YEAR',
+                        style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                              color: Theme.of(context)
+                                  .colorScheme
+                                  .onTertiary
+                                  .withOpacity(0.5),
+                              fontWeight: FontWeight.w600,
+                            ),
+                      ),
+                      Text(
+                        '1',
+                        style: Theme.of(context)
+                            .textTheme
+                            .displaySmall!
+                            .copyWith(
+                                color:
+                                    Theme.of(context).colorScheme.onTertiary),
+                      ),
+                    ],
+                  ),
                 ),
               )
             ],
