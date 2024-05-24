@@ -30,6 +30,11 @@ class AppTheme {
       textTheme: const TextTheme(
         displaySmall: TextStyle(
           fontFamily: 'PPNeueMontreal',
+          fontSize: 80,
+          fontWeight: FontWeight.w600,
+        ),
+        displayMedium: TextStyle(
+          fontFamily: 'PPNeueMontreal',
           fontSize: 90,
           fontWeight: FontWeight.w600,
         ),

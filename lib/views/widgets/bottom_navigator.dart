@@ -1,3 +1,4 @@
+import 'package:canoo/services/navigation_service.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -11,6 +12,7 @@ class BottomNavigator extends StatefulWidget {
 }
 
 class _BottomNavigatorState extends State<BottomNavigator> {
+  final NavigationService _navigationService = NavigationService();
   int _selectedIndex = 0;
   final _activatedItemColor = Colors.white;
   final _inactivatedItemColor = Colors.white54;
@@ -38,6 +40,7 @@ class _BottomNavigatorState extends State<BottomNavigator> {
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+      _navigationService.navigateTo('/more');
     });
   }
 

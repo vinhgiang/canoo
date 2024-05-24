@@ -67,7 +67,7 @@ class ProfileOverView extends StatelessWidget {
                         '1',
                         style: Theme.of(context)
                             .textTheme
-                            .displaySmall!
+                            .displayMedium!
                             .copyWith(
                                 color:
                                     Theme.of(context).colorScheme.onTertiary),
