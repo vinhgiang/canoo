@@ -1,19 +1,21 @@
+import 'package:canoo/providers/bottom_navigator_provider.dart';
 import 'package:canoo/services/navigation_service.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class BottomNavigator extends StatefulWidget {
+class BottomNavigator extends ConsumerStatefulWidget {
   const BottomNavigator({super.key});
 
   @override
-  State<BottomNavigator> createState() {
+  ConsumerState<BottomNavigator> createState() {
     return _BottomNavigatorState();
   }
 }
 
-class _BottomNavigatorState extends State<BottomNavigator> {
+class _BottomNavigatorState extends ConsumerState<BottomNavigator> {
   final NavigationService _navigationService = NavigationService();
-  int _selectedIndex = 0;
+  // int _selectedIndex = 0;
   final _activatedItemColor = Colors.white;
   final _inactivatedItemColor = Colors.white54;
   final _activatedBgColor = Colors.white24;
@@ -21,33 +23,33 @@ class _BottomNavigatorState extends State<BottomNavigator> {
   final _activatedTextStyle = const TextStyle(color: Colors.white);
   final _inactivatedTextStyle = const TextStyle(color: Colors.white54);
 
+  @override
+  void initState() {
+    super.initState();
+    // _selectedIndex = ref.read(bottomNavigatorProvider);
+  }
+
   Color _getBgColor(int index) {
-    return _selectedIndex == index ? _activatedBgColor : _inactivatedBgColor;
+    return ref.watch(bottomNavigatorProvider) == index ? _activatedBgColor : _inactivatedBgColor;
   }
 
   TextStyle _getTextStyle(int index) {
-    return _selectedIndex == index
+    return ref.watch(bottomNavigatorProvider) == index
         ? _activatedTextStyle
         : _inactivatedTextStyle;
   }
 
   Color _getItemColor(int index) {
-    return _selectedIndex == index
+    return ref.watch(bottomNavigatorProvider) == index
         ? _activatedItemColor
         : _inactivatedItemColor;
   }
 
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-      _navigationService.navigateTo('/more');
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
+    final selectedIndex = ref.watch(bottomNavigatorProvider);
     return BottomNavigationBar(
-      currentIndex: _selectedIndex,
+      currentIndex: selectedIndex,
       type: BottomNavigationBarType.fixed,
       selectedFontSize: 0,
       unselectedFontSize: 0,
@@ -76,8 +78,7 @@ class _BottomNavigatorState extends State<BottomNavigator> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(FontAwesomeIcons.locationDot,
-                    color: _getItemColor(1), size: 19),
+                Icon(FontAwesomeIcons.locationDot, color: _getItemColor(1), size: 19),
                 const SizedBox(height: 10),
                 Text('explore', style: _getTextStyle(1)),
               ],
@@ -132,8 +133,7 @@ class _BottomNavigatorState extends State<BottomNavigator> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(FontAwesomeIcons.ellipsisVertical,
-                    color: _getItemColor(4), size: 19),
+                Icon(FontAwesomeIcons.ellipsisVertical, color: _getItemColor(4), size: 19),
                 const SizedBox(height: 10),
                 Text('more', style: _getTextStyle(4)),
               ],
@@ -142,7 +142,9 @@ class _BottomNavigatorState extends State<BottomNavigator> {
           label: 'more',
         ),
       ],
-      onTap: _onItemTapped,
+      onTap: (index) {
+        ref.read(bottomNavigatorProvider.notifier).updateIndex(index);
+      },
     );
   }
 }

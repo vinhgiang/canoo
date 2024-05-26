@@ -3,10 +3,16 @@ import 'package:canoo/theme/app_theme.dart';
 import 'package:canoo/views/home_view.dart';
 import 'package:canoo/views/more_view.dart';
 import 'package:canoo/views/profile/profile_view.dart';
+import 'package:canoo/views/tabs_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
-  runApp(const App());
+  runApp(
+    const ProviderScope(
+      child: App(),
+    ),
+  );
 }
 
 class App extends StatelessWidget {
@@ -18,7 +24,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'Canoo',
       theme: AppTheme.darkTheme,
-      home: const HomeView(),
+      home: const TabsView(),
       navigatorKey: NavigationService().navigatorKey,
       routes: {
         '/home': (context) => const HomeView(),
