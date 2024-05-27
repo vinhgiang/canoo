@@ -1,5 +1,4 @@
 import 'package:canoo/providers/bottom_navigator_provider.dart';
-import 'package:canoo/services/navigation_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -14,8 +13,6 @@ class BottomNavigator extends ConsumerStatefulWidget {
 }
 
 class _BottomNavigatorState extends ConsumerState<BottomNavigator> {
-  final NavigationService _navigationService = NavigationService();
-  // int _selectedIndex = 0;
   final _activatedItemColor = Colors.white;
   final _inactivatedItemColor = Colors.white54;
   final _activatedBgColor = Colors.white24;
@@ -26,7 +23,6 @@ class _BottomNavigatorState extends ConsumerState<BottomNavigator> {
   @override
   void initState() {
     super.initState();
-    // _selectedIndex = ref.read(bottomNavigatorProvider);
   }
 
   Color _getBgColor(int index) {
