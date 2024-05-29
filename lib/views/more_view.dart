@@ -5,7 +5,6 @@ class MoreView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('more build');
     return Container(
       padding: const EdgeInsets.fromLTRB(35, 170, 35, 0),
       decoration: const BoxDecoration(

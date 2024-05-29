@@ -1,4 +1,3 @@
-import 'package:canoo/providers/bottom_navigator_provider.dart';
 import 'package:canoo/services/navigation_service.dart';
 import 'package:canoo/views/home_view.dart';
 import 'package:canoo/views/more_view.dart';

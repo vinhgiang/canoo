@@ -24,21 +24,9 @@ class _HomeViewState extends State<HomeView> with AutomaticKeepAliveClientMixin<
   bool get wantKeepAlive => true;
 
   @override
-  void initState() {
-    super.initState();
-    print('home init');
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    print('home dispose');
-  }
-
-  @override
   Widget build(BuildContext context) {
-    print('home build');
     super.build(context);
+
     return SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.fromLTRB(0, 25, 0, 0),
