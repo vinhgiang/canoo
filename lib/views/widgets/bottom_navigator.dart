@@ -4,7 +4,12 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BottomNavigator extends ConsumerStatefulWidget {
-  const BottomNavigator({super.key});
+  final PageController pageController;
+
+  const BottomNavigator({
+    super.key,
+    required this.pageController,
+  });
 
   @override
   ConsumerState<BottomNavigator> createState() {
@@ -19,11 +24,6 @@ class _BottomNavigatorState extends ConsumerState<BottomNavigator> {
   final _inactivatedBgColor = Colors.white10;
   final _activatedTextStyle = const TextStyle(color: Colors.white);
   final _inactivatedTextStyle = const TextStyle(color: Colors.white54);
-
-  @override
-  void initState() {
-    super.initState();
-  }
 
   Color _getBgColor(int index) {
     return ref.watch(bottomNavigatorProvider) == index ? _activatedBgColor : _inactivatedBgColor;
@@ -140,6 +140,7 @@ class _BottomNavigatorState extends ConsumerState<BottomNavigator> {
       ],
       onTap: (index) {
         ref.read(bottomNavigatorProvider.notifier).updateIndex(index);
+        widget.pageController.jumpToPage(index);
       },
     );
   }

@@ -27,26 +27,37 @@ class TabsView extends ConsumerStatefulWidget {
 
 class _TabsViewState extends ConsumerState<TabsView> {
   int _selectedCityIndex = -1;
+  int menuIndex = 0;
+
+  List<Widget> _views = [];
+  PageController _pageController = PageController();
+
+  @override
+  void initState() {
+    super.initState();
+
+    _views = const [
+      HomeView(),
+      Text('Explore'),
+      Text('Check in'),
+      Text('Favourites'),
+      MoreView(),
+    ];
+
+    // menuIndex = ref.watch(bottomNavigatorProvider);
+
+    _pageController = PageController(initialPage: menuIndex);
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    final menuIndex = ref.watch(bottomNavigatorProvider);
-    Widget activeView = const HomeView();
-    switch (menuIndex) {
-      case 0:
-        activeView = const HomeView();
-      case 1:
-        activeView = const Text('Explore');
-      case 2:
-        activeView = const Text('Check in');
-      case 3:
-        activeView = const Text('Favourites');
-      case 4:
-        activeView = const MoreView();
-      default:
-        activeView = const HomeView();
-    }
-
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.background,
@@ -138,7 +149,11 @@ class _TabsViewState extends ConsumerState<TabsView> {
         ],
       ),
       resizeToAvoidBottomInset: false,
-      body: activeView,
+      body: PageView(
+        controller: _pageController,
+        physics: const NeverScrollableScrollPhysics(),
+        children: _views,
+      ),
       floatingActionButton: SizedBox(
         width: 150,
         child: ElevatedButton(
@@ -153,7 +168,7 @@ class _TabsViewState extends ConsumerState<TabsView> {
           ),
         ),
       ),
-      bottomNavigationBar: const BottomNavigator(),
+      bottomNavigationBar: BottomNavigator(pageController: _pageController),
     );
   }
 }

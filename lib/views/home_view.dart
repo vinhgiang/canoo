@@ -12,11 +12,33 @@ import '../data/dummy.dart';
 import 'widgets/on_this_week.dart';
 import 'widgets/advertisement_slider.dart';
 
-class HomeView extends StatelessWidget {
+class HomeView extends StatefulWidget {
   const HomeView({super.key});
 
   @override
+  State<HomeView> createState() => _HomeViewState();
+}
+
+class _HomeViewState extends State<HomeView> with AutomaticKeepAliveClientMixin<HomeView> {
+  @override
+  bool get wantKeepAlive => true;
+
+  @override
+  void initState() {
+    super.initState();
+    print('home init');
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    print('home dispose');
+  }
+
+  @override
   Widget build(BuildContext context) {
+    print('home build');
+    super.build(context);
     return SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.fromLTRB(0, 25, 0, 0),
