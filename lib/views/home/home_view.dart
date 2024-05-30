@@ -1,16 +1,16 @@
-import 'package:canoo/views/widgets/curated_for_you.dart';
-import 'package:canoo/views/widgets/deals.dart';
-import 'package:canoo/views/widgets/explore.dart';
-import 'package:canoo/views/widgets/free_nearby.dart';
-import 'package:canoo/views/widgets/greeting.dart';
-import 'package:canoo/views/widgets/highlight_event.dart';
+import 'package:canoo/views/home/widgets/curated_for_you.dart';
+import 'package:canoo/views/home/widgets/deals.dart';
+import 'package:canoo/views/home/widgets/explore.dart';
+import 'package:canoo/views/home/widgets/free_nearby.dart';
+import 'package:canoo/views/home/widgets/greeting.dart';
+import 'package:canoo/views/home/widgets/highlight_event.dart';
 import 'package:canoo/views/widgets/share/call_to_action.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../data/dummy.dart';
+import '../../data/dummy.dart';
 import 'widgets/on_this_week.dart';
-import 'widgets/advertisement_slider.dart';
+import '../widgets/advertisement_slider.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});

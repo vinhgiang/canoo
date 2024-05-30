@@ -1,6 +1,9 @@
+import 'package:canoo/providers/bottom_navigator_provider.dart';
 import 'package:canoo/services/navigation_service.dart';
-import 'package:canoo/views/home_view.dart';
-import 'package:canoo/views/more_view.dart';
+import 'package:canoo/views/home/home_view.dart';
+import 'package:canoo/views/more/more_view.dart';
+import 'package:canoo/views/pre_loader/pre_loader_view.dart';
+import 'package:canoo/views/sponsorship/sponsorship_view.dart';
 import 'package:canoo/views/widgets/bottom_navigator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -37,13 +40,11 @@ class _TabsViewState extends ConsumerState<TabsView> {
 
     _views = const [
       HomeView(),
-      Text('Explore'),
-      Text('Check in'),
+      PreLoaderView(),
+      SponsorshipView(),
       Text('Favourites'),
       MoreView(),
     ];
-
-    // menuIndex = ref.watch(bottomNavigatorProvider);
 
     _pageController = PageController(initialPage: menuIndex);
   }
@@ -57,6 +58,8 @@ class _TabsViewState extends ConsumerState<TabsView> {
 
   @override
   Widget build(BuildContext context) {
+    menuIndex = ref.watch(bottomNavigatorProvider);
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.background,
@@ -153,20 +156,22 @@ class _TabsViewState extends ConsumerState<TabsView> {
         physics: const NeverScrollableScrollPhysics(),
         children: _views,
       ),
-      floatingActionButton: SizedBox(
-        width: 150,
-        child: ElevatedButton(
-          onPressed: () {},
-          child: const Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(Icons.map_outlined, size: 20),
-              SizedBox(width: 10),
-              Text('Map View'),
-            ],
-          ),
-        ),
-      ),
+      floatingActionButton: menuIndex <= 1
+          ? SizedBox(
+              width: 150,
+              child: ElevatedButton(
+                onPressed: () {},
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.map_outlined, size: 20),
+                    SizedBox(width: 10),
+                    Text('Map View'),
+                  ],
+                ),
+              ),
+            )
+          : null,
       bottomNavigationBar: BottomNavigator(pageController: _pageController),
     );
   }

@@ -2,7 +2,7 @@ import 'package:canoo/views/widgets/share/slider_section.dart';
 import 'package:canoo/views/widgets/slider/horizontal_slider.dart';
 import 'package:flutter/material.dart';
 
-import '../../data/dummy.dart';
+import '../../../data/dummy.dart';
 
 class Deals extends StatelessWidget {
   const Deals({super.key});
