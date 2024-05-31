@@ -60,96 +60,100 @@ class _TabsViewState extends ConsumerState<TabsView> {
   Widget build(BuildContext context) {
     menuIndex = ref.watch(bottomNavigatorProvider);
 
+    bool isAppBarVisible = menuIndex == 0 || menuIndex == 1 || menuIndex == 3;
+
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.background,
-        leadingWidth: 125,
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 10),
-          child: Column(
-            children: [
-              Image.asset('assets/images/canoo.png'),
-              InkWell(
-                onTap: () {
-                  showCupertinoModalPopup(
-                    context: context,
-                    builder: (BuildContext context) => Container(
-                      height: 200,
-                      // Provide a background color for the popup.
-                      color: CupertinoColors.systemBackground.resolveFrom(context),
-                      // Use a SafeArea widget to avoid system overlaps.
-                      child: SafeArea(
-                        top: false,
-                        child: CupertinoPicker(
-                          magnification: 1.22,
-                          squeeze: 1.2,
-                          useMagnifier: true,
-                          itemExtent: 32.0,
-                          // This sets the initial item.
-                          scrollController: FixedExtentScrollController(
-                            initialItem: 0,
-                          ),
-                          // This is called when selected item is changed.
-                          onSelectedItemChanged: (int selectedItem) {
-                            setState(() {
-                              _selectedCityIndex = selectedItem;
-                            });
-                          },
-                          children: List<Widget>.generate(_cities.length, (int index) {
-                            return Center(child: Text(_cities[index]));
-                          }),
-                        ),
-                      ),
-                    ),
-                  );
-                },
-                child: Row(
+      appBar: isAppBarVisible
+          ? AppBar(
+              backgroundColor: Theme.of(context).colorScheme.background,
+              leadingWidth: 125,
+              leading: Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: Column(
                   children: [
-                    Text(
-                      _selectedCityIndex >= 0 ? _cities[_selectedCityIndex] : 'my location',
-                      style: Theme.of(context).textTheme.bodySmall,
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.only(left: 5),
-                      child: Icon(
-                        FontAwesomeIcons.chevronDown,
-                        // since IconThemeData does not apply to AppBar (a known bug from Flutter)
-                        // we have to manually apply here
-                        // this also don't support bold
-                        size: 12,
-                        color: Colors.grey,
+                    Image.asset('assets/images/canoo.png'),
+                    InkWell(
+                      onTap: () {
+                        showCupertinoModalPopup(
+                          context: context,
+                          builder: (BuildContext context) => Container(
+                            height: 200,
+                            // Provide a background color for the popup.
+                            color: CupertinoColors.systemBackground.resolveFrom(context),
+                            // Use a SafeArea widget to avoid system overlaps.
+                            child: SafeArea(
+                              top: false,
+                              child: CupertinoPicker(
+                                magnification: 1.22,
+                                squeeze: 1.2,
+                                useMagnifier: true,
+                                itemExtent: 32.0,
+                                // This sets the initial item.
+                                scrollController: FixedExtentScrollController(
+                                  initialItem: 0,
+                                ),
+                                // This is called when selected item is changed.
+                                onSelectedItemChanged: (int selectedItem) {
+                                  setState(() {
+                                    _selectedCityIndex = selectedItem;
+                                  });
+                                },
+                                children: List<Widget>.generate(_cities.length, (int index) {
+                                  return Center(child: Text(_cities[index]));
+                                }),
+                              ),
+                            ),
+                          ),
+                        );
+                      },
+                      child: Row(
+                        children: [
+                          Text(
+                            _selectedCityIndex >= 0 ? _cities[_selectedCityIndex] : 'my location',
+                            style: Theme.of(context).textTheme.bodySmall,
+                          ),
+                          const Padding(
+                            padding: EdgeInsets.only(left: 5),
+                            child: Icon(
+                              FontAwesomeIcons.chevronDown,
+                              // since IconThemeData does not apply to AppBar (a known bug from Flutter)
+                              // we have to manually apply here
+                              // this also don't support bold
+                              size: 12,
+                              color: Colors.grey,
+                            ),
+                          ),
+                        ],
                       ),
-                    ),
+                    )
                   ],
                 ),
-              )
-            ],
-          ),
-        ),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 10),
-            child: Row(
-              children: [
-                IconButton(
-                  icon: const Icon(FontAwesomeIcons.magnifyingGlass),
-                  onPressed: () {},
-                ),
-                const SizedBox(width: 10),
-                InkWell(
-                  onTap: () {
-                    NavigationService().navigateTo('/profile');
-                  },
-                  child: Image.asset(
-                    'assets/images/profile-picture.jpg',
-                    width: 25,
+              ),
+              actions: [
+                Padding(
+                  padding: const EdgeInsets.only(right: 10),
+                  child: Row(
+                    children: [
+                      IconButton(
+                        icon: const Icon(FontAwesomeIcons.magnifyingGlass),
+                        onPressed: () {},
+                      ),
+                      const SizedBox(width: 10),
+                      InkWell(
+                        onTap: () {
+                          NavigationService().navigateTo('/profile');
+                        },
+                        child: Image.asset(
+                          'assets/images/profile-picture.jpg',
+                          width: 25,
+                        ),
+                      ),
+                    ],
                   ),
-                ),
+                )
               ],
-            ),
-          )
-        ],
-      ),
+            )
+          : null,
       resizeToAvoidBottomInset: false,
       body: PageView(
         controller: _pageController,
