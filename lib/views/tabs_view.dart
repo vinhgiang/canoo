@@ -1,6 +1,7 @@
 import 'package:canoo/providers/bottom_navigator_provider.dart';
 import 'package:canoo/services/navigation_service.dart';
 import 'package:canoo/views/home/home_view.dart';
+import 'package:canoo/views/manual_check_in/manual_check_in_view.dart';
 import 'package:canoo/views/more/more_view.dart';
 import 'package:canoo/views/pre_loader/pre_loader_view.dart';
 import 'package:canoo/views/sponsorship/sponsorship_view.dart';
@@ -41,7 +42,7 @@ class _TabsViewState extends ConsumerState<TabsView> {
     _views = const [
       HomeView(),
       PreLoaderView(),
-      SponsorshipView(),
+      ManualCheckInView(),
       Text('Favourites'),
       MoreView(),
     ];

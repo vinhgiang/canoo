@@ -81,8 +81,8 @@ class AppTheme {
         bodyLarge: TextStyle(
           fontFamily: 'PPNeueMontreal',
           fontWeight: FontWeight.w500,
-          fontSize: 19,
-          height: 1,
+          fontSize: 17.8,
+          height: 1.2,
         ),
         labelSmall: TextStyle(
           fontFamily: 'PPNeueMontreal',
@@ -104,6 +104,14 @@ class AppTheme {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(0),
           ),
+        ),
+      ),
+      textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(
+          foregroundColor: Colors.white, // Text color
+          backgroundColor: Colors.white10, // Background color
+          shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+          padding: const EdgeInsets.only(left: 25, right: 25),
         ),
       ),
       floatingActionButtonTheme: FloatingActionButtonThemeData(

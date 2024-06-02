@@ -23,23 +23,23 @@ class MoreView extends ConsumerWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Text('about', style: Theme.of(context).textTheme.bodyLarge),
-              const SizedBox(height: 45),
+              const SizedBox(height: 40),
               Text('frequently asked questions', style: Theme.of(context).textTheme.bodyLarge),
-              const SizedBox(height: 45),
+              const SizedBox(height: 40),
               InkWell(
                 onTap: () {
                   ref.read(moreViewModelProvider).openPrivacyPolicy();
                 },
                 child: Text('privacy policy', style: Theme.of(context).textTheme.bodyLarge),
               ),
-              const SizedBox(height: 45),
+              const SizedBox(height: 40),
               InkWell(
                 onTap: () {
                   ref.read(moreViewModelProvider).openTermsAndConditions();
                 },
                 child: Text('terms & conditions', style: Theme.of(context).textTheme.bodyLarge),
               ),
-              const SizedBox(height: 45),
+              const SizedBox(height: 40),
               Text('app version v 355', style: Theme.of(context).textTheme.bodyLarge),
             ],
           ),
