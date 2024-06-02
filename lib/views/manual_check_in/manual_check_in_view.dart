@@ -1,3 +1,4 @@
+import 'package:canoo/services/navigation_service.dart';
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
@@ -15,6 +16,8 @@ class _ManualCheckInViewState extends State<ManualCheckInView>
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
+
     return Container(
       padding: const EdgeInsets.fromLTRB(35, 170, 35, 0),
       child: Column(
@@ -33,9 +36,9 @@ class _ManualCheckInViewState extends State<ManualCheckInView>
             obscureText: false,
             pinTheme: PinTheme(
               shape: PinCodeFieldShape.underline,
-              inactiveColor: Colors.grey,
-              selectedColor: Colors.white,
-              activeColor: Colors.white,
+              inactiveColor: Theme.of(context).colorScheme.onBackground,
+              selectedColor: Theme.of(context).colorScheme.onSurface,
+              activeColor: Theme.of(context).colorScheme.onSurface,
             ),
             keyboardType: TextInputType.number,
             enablePinAutofill: true,
@@ -44,7 +47,7 @@ class _ManualCheckInViewState extends State<ManualCheckInView>
             animationDuration: const Duration(milliseconds: 300),
             // controller: textEditingController,
             onCompleted: (v) {
-              print("Completed");
+              NavigationService().navigateTo('/code-verified');
             },
             onChanged: (value) {
               print(value);

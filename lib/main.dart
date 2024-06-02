@@ -1,5 +1,6 @@
 import 'package:canoo/services/navigation_service.dart';
 import 'package:canoo/theme/app_theme.dart';
+import 'package:canoo/views/code_verified/code_verified_view.dart';
 import 'package:canoo/views/home/home_view.dart';
 import 'package:canoo/views/more/more_view.dart';
 import 'package:canoo/views/profile/profile_view.dart';
@@ -31,6 +32,7 @@ class App extends StatelessWidget {
         '/home': (context) => const HomeView(),
         '/profile': (context) => const ProfileView(),
         '/more': (context) => const MoreView(),
+        '/code-verified': (context) => const CodeVerifiedView(),
       },
     );
   }
