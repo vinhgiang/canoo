@@ -1,3 +1,4 @@
+import 'package:custom_radio_grouped_button/custom_radio_grouped_button.dart';
 import 'package:flutter/material.dart';
 
 class CodeVerifiedView extends StatelessWidget {
@@ -41,9 +42,31 @@ class CodeVerifiedView extends StatelessWidget {
                       style: Theme.of(context).textTheme.headlineMedium,
                     ),
                     Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        const Text('Children under 18 must be accompanied by an adult.'),
+                        CustomRadioButton(
+                          unSelectedColor: Theme.of(context).colorScheme.onBackground,
+                          margin: const EdgeInsets.all(0),
+                          selectedColor: Theme.of(context).colorScheme.primary,
+                          width: 72,
+                          height: 72,
+                          elevation: 0,
+                          enableButtonWrap: true,
+                          wrapAlignment: WrapAlignment.end,
+                          buttonLables: const ['0', '1', '2', '3', '4'],
+                          buttonValues: const ['0', '1', '2', '3', '4'],
+                          buttonTextStyle: ButtonTextStyle(
+                            selectedColor: Theme.of(context).colorScheme.onPrimary,
+                            unSelectedColor: Theme.of(context).colorScheme.secondary,
+                            textStyle: Theme.of(context).textTheme.headlineSmall!.copyWith(
+                                  fontWeight: FontWeight.w500,
+                                ),
+                          ),
+                          radioButtonValue: (value) {
+                            print(value);
+                          },
+                        ),
+                        const SizedBox(height: 50),
                         SizedBox(
                           width: MediaQuery.of(context).size.width,
                           child: ElevatedButton(

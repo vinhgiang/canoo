@@ -114,6 +114,12 @@ class AppTheme {
           padding: const EdgeInsets.only(left: 25, right: 25),
         ),
       ),
+      cardTheme: const CardTheme(
+        // This is for CustomRadioButton because that package uses Card behind the scenes
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.zero,
+        ),
+      ),
       floatingActionButtonTheme: FloatingActionButtonThemeData(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(0),
