@@ -1,8 +1,22 @@
+import 'package:canoo/theme/app_theme.dart';
+import 'package:canoo/views/code_verified/widgets/check_in_instruction.dart';
 import 'package:custom_radio_grouped_button/custom_radio_grouped_button.dart';
 import 'package:flutter/material.dart';
 
 class CodeVerifiedView extends StatelessWidget {
   const CodeVerifiedView({super.key});
+
+  void _checkin(BuildContext context) {
+    showModalBottomSheet(
+      useSafeArea: true,
+      isScrollControlled: true,
+      context: context,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.zero,
+      ),
+      builder: (ctx) => const CheckInInstruction(),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -55,22 +69,17 @@ class CodeVerifiedView extends StatelessWidget {
                           wrapAlignment: WrapAlignment.end,
                           buttonLables: const ['0', '1', '2', '3', '4'],
                           buttonValues: const ['0', '1', '2', '3', '4'],
-                          buttonTextStyle: ButtonTextStyle(
-                            selectedColor: Theme.of(context).colorScheme.onPrimary,
-                            unSelectedColor: Theme.of(context).colorScheme.secondary,
-                            textStyle: Theme.of(context).textTheme.headlineSmall!.copyWith(
-                                  fontWeight: FontWeight.w500,
-                                ),
-                          ),
+                          buttonTextStyle: AppTheme.getRadioButtonStyle(context),
                           radioButtonValue: (value) {
                             print(value);
                           },
                         ),
-                        const SizedBox(height: 50),
+                        const SizedBox(height: 35),
                         SizedBox(
                           width: MediaQuery.of(context).size.width,
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () => _checkin(context),
+                            style: AppTheme.getPrimaryButtonLargeStyle(context),
                             child: const Text('Tap here to check in'),
                           ),
                         )

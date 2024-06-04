@@ -4,7 +4,6 @@ import 'package:canoo/views/home/home_view.dart';
 import 'package:canoo/views/manual_check_in/manual_check_in_view.dart';
 import 'package:canoo/views/more/more_view.dart';
 import 'package:canoo/views/pre_loader/pre_loader_view.dart';
-import 'package:canoo/views/sponsorship/sponsorship_view.dart';
 import 'package:canoo/views/widgets/bottom_navigator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

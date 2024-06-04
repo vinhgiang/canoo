@@ -1,6 +1,28 @@
+import 'package:custom_radio_grouped_button/custom_radio_grouped_button.dart';
 import 'package:flutter/material.dart';
 
 class AppTheme {
+  static ButtonStyle getPrimaryButtonLargeStyle(BuildContext context) {
+    return ElevatedButton.styleFrom(
+      padding: const EdgeInsets.all(15),
+      textStyle: Theme.of(context).textTheme.titleMedium,
+    );
+  }
+
+  static ButtonTextStyle getRadioButtonStyle(BuildContext context) {
+    return ButtonTextStyle(
+      selectedColor: Theme.of(context).colorScheme.onPrimary,
+      unSelectedColor: Theme.of(context).colorScheme.secondary,
+      textStyle: Theme.of(context).textTheme.headlineSmall!.copyWith(
+            fontWeight: FontWeight.w500,
+          ),
+    );
+  }
+
+  static Color getSponsoredByContainerBg() {
+    return const Color.fromRGBO(234, 234, 234, 1);
+  }
+
   static ThemeData get darkTheme {
     return ThemeData(
       brightness: Brightness.dark,
@@ -106,6 +128,7 @@ class AppTheme {
           ),
         ),
       ),
+      // TODO: move this to buttonStyle so that we can use elevatedButton
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
           foregroundColor: Colors.white, // Text color
