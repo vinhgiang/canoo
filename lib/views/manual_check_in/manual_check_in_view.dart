@@ -2,22 +2,17 @@ import 'package:canoo/services/navigation_service.dart';
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
-class ManualCheckInView extends StatefulWidget {
-  const ManualCheckInView({super.key});
+class ManualCheckInView extends StatelessWidget {
+  final TextEditingController pinCodeController = TextEditingController();
 
-  @override
-  State<ManualCheckInView> createState() => _ManualCheckInViewState();
-}
+  ManualCheckInView({super.key});
 
-class _ManualCheckInViewState extends State<ManualCheckInView>
-    with AutomaticKeepAliveClientMixin<ManualCheckInView> {
-  @override
-  bool get wantKeepAlive => true;
+  void _resetPinCode() {
+    pinCodeController.clear();
+  }
 
   @override
   Widget build(BuildContext context) {
-    super.build(context);
-
     return Container(
       padding: const EdgeInsets.fromLTRB(35, 170, 35, 0),
       child: Column(
@@ -45,16 +40,13 @@ class _ManualCheckInViewState extends State<ManualCheckInView>
             showCursor: false,
             animationType: AnimationType.fade,
             animationDuration: const Duration(milliseconds: 300),
-            // controller: textEditingController,
-            onCompleted: (v) {
-              NavigationService().navigateTo('/code-verified');
+            controller: pinCodeController,
+            onCompleted: (v) async {
+              await NavigationService().navigateTo('/code-verified');
+              // the below line will only be executed when user navigate back from /code-verified screen
+              _resetPinCode();
             },
-            onChanged: (value) {
-              print(value);
-              // setState(() {
-              //   currentText = value;
-              // });
-            },
+            onChanged: (value) {},
           ),
           const SizedBox(height: 50),
           TextButton(

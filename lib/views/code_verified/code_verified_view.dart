@@ -70,9 +70,7 @@ class CodeVerifiedView extends StatelessWidget {
                           buttonLables: const ['0', '1', '2', '3', '4'],
                           buttonValues: const ['0', '1', '2', '3', '4'],
                           buttonTextStyle: AppTheme.getRadioButtonStyle(context),
-                          radioButtonValue: (value) {
-                            print(value);
-                          },
+                          radioButtonValue: (value) {},
                         ),
                         const SizedBox(height: 35),
                         SizedBox(

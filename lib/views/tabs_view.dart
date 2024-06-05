@@ -38,12 +38,12 @@ class _TabsViewState extends ConsumerState<TabsView> {
   void initState() {
     super.initState();
 
-    _views = const [
-      HomeView(),
-      PreLoaderView(),
+    _views = [
+      const HomeView(),
+      const PreLoaderView(),
       ManualCheckInView(),
-      Text('Favourites'),
-      MoreView(),
+      const Text('Favourites'),
+      const MoreView(),
     ];
 
     _pageController = PageController(initialPage: menuIndex);
