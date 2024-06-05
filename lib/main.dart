@@ -5,6 +5,7 @@ import 'package:canoo/views/home/home_view.dart';
 import 'package:canoo/views/more/more_view.dart';
 import 'package:canoo/views/profile/profile_view.dart';
 import 'package:canoo/views/tabs_view.dart';
+import 'package:canoo/views/voucher/voucher_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -33,6 +34,7 @@ class App extends StatelessWidget {
         '/profile': (context) => const ProfileView(),
         '/more': (context) => const MoreView(),
         '/code-verified': (context) => const CodeVerifiedView(),
+        '/voucher': (context) => const VoucherView(),
       },
     );
   }

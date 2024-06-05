@@ -80,6 +80,7 @@ flutter:
     - assets/images/welcome-banner.png
     - assets/images/ziplines-in-the-classic.jpg
     - assets/images/canoo-into-canada.jpg
+    - assets/images/canoo-voucher.png
     
     - assets/images/sponsors/cibc-bell.png
     - assets/images/sponsors/cibc-bell-color.png
@@ -120,6 +121,7 @@ flutter:
     - assets/images/places/contemporary.jpg
     - assets/images/places/telus-spark-6d.jpg
     - assets/images/places/studio-bell.jpg
+    - assets/images/places/heritage-park-historical-village.jpg
 
     - assets/images/deals/50-off-via-rail.jpg
     - assets/images/deals/bow-habitat.jpg

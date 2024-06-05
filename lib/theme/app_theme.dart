@@ -2,6 +2,15 @@ import 'package:custom_radio_grouped_button/custom_radio_grouped_button.dart';
 import 'package:flutter/material.dart';
 
 class AppTheme {
+  static Color discountPercentageColor = const Color.fromRGBO(255, 188, 53, 1);
+
+  static discountPercentageTextStyle(BuildContext context) {
+    return Theme.of(context).textTheme.displaySmall!.copyWith(
+          color: Theme.of(context).colorScheme.onTertiary,
+          height: 0.8,
+        );
+  }
+
   static ButtonStyle getPrimaryButtonLargeStyle(BuildContext context) {
     return ElevatedButton.styleFrom(
       padding: const EdgeInsets.all(15),

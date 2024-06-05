@@ -1,3 +1,4 @@
+import 'package:canoo/services/navigation_service.dart';
 import 'package:canoo/theme/app_theme.dart';
 import 'package:canoo/views/widgets/share/bullet_list.dart';
 import 'package:flutter/material.dart';
@@ -52,7 +53,9 @@ class CheckInInstruction extends StatelessWidget {
                     width: double.infinity,
                     child: ElevatedButton(
                       style: AppTheme.getPrimaryButtonLargeStyle(context),
-                      onPressed: () {},
+                      onPressed: () {
+                        NavigationService().navigateTo('/voucher');
+                      },
                       child: const Text('Get my voucher'),
                     ),
                   )
