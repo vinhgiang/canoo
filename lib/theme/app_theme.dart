@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
   static Color discountPercentageColor = const Color.fromRGBO(255, 188, 53, 1);
+  static Color sponsoredByContainerBg = const Color.fromRGBO(234, 234, 234, 1);
 
   static discountPercentageTextStyle(BuildContext context) {
     return Theme.of(context).textTheme.displaySmall!.copyWith(
@@ -28,8 +29,16 @@ class AppTheme {
     );
   }
 
-  static Color getSponsoredByContainerBg() {
-    return const Color.fromRGBO(234, 234, 234, 1);
+  static TextStyle getVoucherValueStyle(BuildContext context) {
+    return Theme.of(context).textTheme.titleMedium!.copyWith(
+          color: Theme.of(context).colorScheme.onInverseSurface,
+        );
+  }
+
+  static TextStyle getVoucherTitleStyle(BuildContext context) {
+    return Theme.of(context).textTheme.bodyLarge!.copyWith(
+          color: Theme.of(context).colorScheme.secondary,
+        );
   }
 
   static ThemeData get darkTheme {

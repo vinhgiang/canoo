@@ -1,11 +1,17 @@
+import 'package:canoo/providers/children_count_provider.dart';
 import 'package:canoo/theme/app_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:intl/intl.dart';
 
-class VoucherView extends StatelessWidget {
+class VoucherView extends ConsumerWidget {
   const VoucherView({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    DateTime now = DateTime.now();
+    int numChildren = ref.watch(childrenCountProvider);
+
     return Scaffold(
       appBar: AppBar(
         // disable back button
@@ -59,23 +65,17 @@ class VoucherView extends StatelessWidget {
                               children: [
                                 Text(
                                   'Heritage Park Historical Village',
-                                  style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                                        color: Theme.of(context).colorScheme.onInverseSurface,
-                                      ),
+                                  style: AppTheme.getVoucherValueStyle(context),
                                 ),
                                 const SizedBox(height: 35),
                                 Text(
                                   'Canoo Member Name',
-                                  style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                                        color: Theme.of(context).colorScheme.secondary,
-                                      ),
+                                  style: AppTheme.getVoucherTitleStyle(context),
                                 ),
                                 const SizedBox(height: 5),
                                 Text(
                                   'XUAN MAI NGO',
-                                  style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                                        color: Theme.of(context).colorScheme.onInverseSurface,
-                                      ),
+                                  style: AppTheme.getVoucherValueStyle(context),
                                 ),
                                 const SizedBox(height: 35),
                                 Row(
@@ -87,17 +87,13 @@ class VoucherView extends StatelessWidget {
                                     Expanded(
                                       child: Text(
                                         'Adults',
-                                        style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                                              color: Theme.of(context).colorScheme.secondary,
-                                            ),
+                                        style: AppTheme.getVoucherTitleStyle(context),
                                       ),
                                     ),
                                     Expanded(
                                       child: Text(
                                         'Children',
-                                        style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                                              color: Theme.of(context).colorScheme.secondary,
-                                            ),
+                                        style: AppTheme.getVoucherTitleStyle(context),
                                       ),
                                     ),
                                   ],
@@ -110,36 +106,24 @@ class VoucherView extends StatelessWidget {
                                     // wrap the below Text widgets with Expanded
                                     // to make them take equal size (50% in this case)
                                     Expanded(
-                                      child: Text(
-                                        '1',
-                                        style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                                              color: Theme.of(context).colorScheme.onInverseSurface,
-                                            ),
-                                      ),
+                                      child:
+                                          Text('1', style: AppTheme.getVoucherValueStyle(context)),
                                     ),
                                     Expanded(
-                                      child: Text(
-                                        '0',
-                                        style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                                              color: Theme.of(context).colorScheme.onInverseSurface,
-                                            ),
-                                      ),
+                                      child: Text(numChildren!.toString(),
+                                          style: AppTheme.getVoucherValueStyle(context)),
                                     ),
                                   ],
                                 ),
                                 const SizedBox(height: 35),
                                 Text(
                                   'Check-in-on',
-                                  style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                                        color: Theme.of(context).colorScheme.secondary,
-                                      ),
+                                  style: AppTheme.getVoucherTitleStyle(context),
                                 ),
                                 const SizedBox(height: 5),
                                 Text(
-                                  '23 Apr - 4:02PM',
-                                  style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                                        color: Theme.of(context).colorScheme.onInverseSurface,
-                                      ),
+                                  DateFormat("dd MMM - h:mm a").format(now),
+                                  style: AppTheme.getVoucherValueStyle(context),
                                 ),
                               ],
                             ),

@@ -1,9 +1,11 @@
+import 'package:canoo/providers/children_count_provider.dart';
 import 'package:canoo/theme/app_theme.dart';
 import 'package:canoo/views/code_verified/widgets/check_in_instruction.dart';
 import 'package:custom_radio_grouped_button/custom_radio_grouped_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class CodeVerifiedView extends StatelessWidget {
+class CodeVerifiedView extends ConsumerWidget {
   const CodeVerifiedView({super.key});
 
   void _checkin(BuildContext context) {
@@ -19,7 +21,7 @@ class CodeVerifiedView extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.onBackground,
       appBar: AppBar(),
@@ -70,7 +72,9 @@ class CodeVerifiedView extends StatelessWidget {
                           buttonLables: const ['0', '1', '2', '3', '4'],
                           buttonValues: const ['0', '1', '2', '3', '4'],
                           buttonTextStyle: AppTheme.getRadioButtonStyle(context),
-                          radioButtonValue: (value) {},
+                          radioButtonValue: (value) {
+                            ref.read(childrenCountProvider.notifier).updateCount(int.parse(value));
+                          },
                         ),
                         const SizedBox(height: 35),
                         SizedBox(

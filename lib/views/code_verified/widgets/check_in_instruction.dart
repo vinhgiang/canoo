@@ -15,7 +15,7 @@ class CheckInInstruction extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Container(
-            color: AppTheme.getSponsoredByContainerBg(),
+            color: AppTheme.sponsoredByContainerBg,
             padding: const EdgeInsets.all(35),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
