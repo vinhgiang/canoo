@@ -74,7 +74,7 @@ class VoucherView extends ConsumerWidget {
                                 ),
                                 const SizedBox(height: 5),
                                 Text(
-                                  'XUAN MAI NGO',
+                                  'CAM VINH GIANG',
                                   style: AppTheme.getVoucherValueStyle(context),
                                 ),
                                 const SizedBox(height: 35),
@@ -110,7 +110,7 @@ class VoucherView extends ConsumerWidget {
                                           Text('1', style: AppTheme.getVoucherValueStyle(context)),
                                     ),
                                     Expanded(
-                                      child: Text(numChildren!.toString(),
+                                      child: Text(numChildren.toString(),
                                           style: AppTheme.getVoucherValueStyle(context)),
                                     ),
                                   ],

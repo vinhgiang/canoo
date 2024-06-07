@@ -1,5 +1,5 @@
-import 'package:canoo/providers/children_count_provider.dart';
 import 'package:canoo/theme/app_theme.dart';
+import 'package:canoo/view_models/code_verified_view_model.dart';
 import 'package:canoo/views/code_verified/widgets/check_in_instruction.dart';
 import 'package:custom_radio_grouped_button/custom_radio_grouped_button.dart';
 import 'package:flutter/material.dart';
@@ -22,6 +22,8 @@ class CodeVerifiedView extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final codeVerifiedViewModel = CodeVerifiedViewModel(ref);
+
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.onBackground,
       appBar: AppBar(),
@@ -73,7 +75,7 @@ class CodeVerifiedView extends ConsumerWidget {
                           buttonValues: const ['0', '1', '2', '3', '4'],
                           buttonTextStyle: AppTheme.getRadioButtonStyle(context),
                           radioButtonValue: (value) {
-                            ref.read(childrenCountProvider.notifier).updateCount(int.parse(value));
+                            codeVerifiedViewModel.onChildrenCountChange(int.parse(value));
                           },
                         ),
                         const SizedBox(height: 35),
