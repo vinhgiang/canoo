@@ -1,5 +1,6 @@
 import 'package:canoo/services/navigation_service.dart';
 import 'package:canoo/theme/app_theme.dart';
+import 'package:canoo/views/check_in_completed/check_in_completed.dart';
 import 'package:canoo/views/code_verified/code_verified_view.dart';
 import 'package:canoo/views/home/home_view.dart';
 import 'package:canoo/views/more/more_view.dart';
@@ -35,6 +36,7 @@ class App extends StatelessWidget {
         '/more': (context) => const MoreView(),
         '/code-verified': (context) => const CodeVerifiedView(),
         '/voucher': (context) => const VoucherView(),
+        '/check-in-completed': (context) => const CheckInCompleted(),
       },
     );
   }

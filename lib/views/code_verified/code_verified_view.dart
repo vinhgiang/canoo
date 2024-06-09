@@ -38,7 +38,7 @@ class CodeVerifiedView extends ConsumerWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text('Code verified successfully!',
-                      style: Theme.of(context).textTheme.headlineSmall),
+                      style: Theme.of(context).textTheme.titleLarge),
                   const SizedBox(height: 20),
                   Text('You are just a step away from exploring',
                       style: Theme.of(context).textTheme.bodyLarge),

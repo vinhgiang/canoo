@@ -17,7 +17,7 @@ class BenefitsDetail extends StatelessWidget {
           children: [
             Text(
               'Here\'s what you can expect in Year 1',
-              style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+              style: Theme.of(context).textTheme.titleLarge!.copyWith(
                     color: Theme.of(context).colorScheme.onPrimary,
                   ),
             ),

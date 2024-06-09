@@ -1,4 +1,5 @@
 import 'package:canoo/providers/children_count_provider.dart';
+import 'package:canoo/services/navigation_service.dart';
 import 'package:canoo/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -52,7 +53,7 @@ class VoucherView extends ConsumerWidget {
                             ),
                           ),
                           Image.asset(
-                            'assets/images/places/heritage-park-historical-village.jpg',
+                            'assets/images/places/science-world.jpg',
                             height: 165,
                             width: double.infinity,
                             fit: BoxFit.cover,
@@ -64,7 +65,7 @@ class VoucherView extends ConsumerWidget {
                               crossAxisAlignment: CrossAxisAlignment.stretch,
                               children: [
                                 Text(
-                                  'Heritage Park Historical Village',
+                                  'Science World',
                                   style: AppTheme.getVoucherValueStyle(context),
                                 ),
                                 const SizedBox(height: 35),
@@ -134,7 +135,9 @@ class VoucherView extends ConsumerWidget {
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          NavigationService().navigateTo('/check-in-completed');
+                        },
                         style: AppTheme.getPrimaryButtonLargeStyle(context),
                         child: const Text(
                           'Complete my check-in',

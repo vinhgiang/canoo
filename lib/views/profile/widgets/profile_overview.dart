@@ -56,10 +56,7 @@ class ProfileOverView extends StatelessWidget {
                       Text(
                         'YEAR',
                         style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                              color: Theme.of(context)
-                                  .colorScheme
-                                  .onTertiary
-                                  .withOpacity(0.5),
+                              color: Theme.of(context).colorScheme.onTertiary.withOpacity(0.5),
                               fontWeight: FontWeight.w600,
                             ),
                       ),
@@ -68,9 +65,7 @@ class ProfileOverView extends StatelessWidget {
                         style: Theme.of(context)
                             .textTheme
                             .displayMedium!
-                            .copyWith(
-                                color:
-                                    Theme.of(context).colorScheme.onTertiary),
+                            .copyWith(color: Theme.of(context).colorScheme.onTertiary),
                       ),
                     ],
                   ),
@@ -99,10 +94,7 @@ class ProfileOverView extends StatelessWidget {
                   Text(
                     'estimated savings',
                     style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                          color: Theme.of(context)
-                              .colorScheme
-                              .onTertiary
-                              .withOpacity(0.5),
+                          color: Theme.of(context).colorScheme.onTertiary.withOpacity(0.5),
                         ),
                   ),
                 ],
@@ -114,10 +106,7 @@ class ProfileOverView extends StatelessWidget {
                     children: [
                       Text(
                         '365',
-                        style: Theme.of(context)
-                            .textTheme
-                            .titleMedium!
-                            .copyWith(
+                        style: Theme.of(context).textTheme.titleMedium!.copyWith(
                               color: Theme.of(context).colorScheme.onTertiary,
                               fontWeight: FontWeight.w600,
                             ),
@@ -125,10 +114,7 @@ class ProfileOverView extends StatelessWidget {
                       Text(
                         'days left',
                         style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                              color: Theme.of(context)
-                                  .colorScheme
-                                  .onTertiary
-                                  .withOpacity(0.5),
+                              color: Theme.of(context).colorScheme.onTertiary.withOpacity(0.5),
                             ),
                       ),
                     ],

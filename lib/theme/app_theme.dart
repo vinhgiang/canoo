@@ -80,6 +80,7 @@ class AppTheme {
         ),
         headlineSmall: TextStyle(
           fontFamily: 'PPNeueMontreal',
+          fontSize: 30,
           fontWeight: FontWeight.w600,
         ),
         headlineMedium: TextStyle(
@@ -104,6 +105,7 @@ class AppTheme {
         ),
         titleLarge: TextStyle(
           fontFamily: 'PPNeueMontreal',
+          fontWeight: FontWeight.w600,
           fontSize: 27,
           height: 1.1,
         ),

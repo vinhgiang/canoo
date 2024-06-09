@@ -12,7 +12,9 @@ class Greeting extends StatelessWidget {
         children: [
           Text(
             'hello, CAM VINH!',
-            style: Theme.of(context).textTheme.headlineSmall,
+            style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                  fontWeight: FontWeight.w900,
+                ),
           ),
           const Text('Check out what is happening arround you'),
         ],
