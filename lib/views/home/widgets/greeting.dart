@@ -11,7 +11,7 @@ class Greeting extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'hello, CAM VINH!',
+            'hello, LUU CAT PHUONG!',
             style: Theme.of(context).textTheme.titleMedium!.copyWith(
                   fontWeight: FontWeight.w900,
                 ),

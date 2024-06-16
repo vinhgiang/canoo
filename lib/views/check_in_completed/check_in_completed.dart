@@ -21,7 +21,7 @@ class CheckInCompleted extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Text(
-                    'You\'re in.',
+                    'You’re in.',
                     style: Theme.of(context).textTheme.headlineLarge,
                   ),
                   const SizedBox(height: 35),

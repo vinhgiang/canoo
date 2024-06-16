@@ -105,7 +105,7 @@ class ProfileOverView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        '365',
+                        '318',
                         style: Theme.of(context).textTheme.titleMedium!.copyWith(
                               color: Theme.of(context).colorScheme.onTertiary,
                               fontWeight: FontWeight.w600,

@@ -12,7 +12,7 @@ class ProfileDetail extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('CAM VINH GIANG', style: Theme.of(context).textTheme.titleMedium),
+              Text('LUU CAT PHUONG NGUYEN', style: Theme.of(context).textTheme.titleMedium),
               const SizedBox(height: 8),
               Text('Member since 22 Apr 2024', style: Theme.of(context).textTheme.labelSmall),
               const SizedBox(height: 40),

@@ -20,7 +20,7 @@ class VoucherView extends ConsumerWidget {
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(35, 10, 35, 0),
+          padding: const EdgeInsets.fromLTRB(35, 5, 35, 0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,7 +54,7 @@ class VoucherView extends ConsumerWidget {
                           ),
                           Image.asset(
                             'assets/images/places/science-world.jpg',
-                            height: 165,
+                            height: 140,
                             width: double.infinity,
                             fit: BoxFit.cover,
                           ),
@@ -68,17 +68,17 @@ class VoucherView extends ConsumerWidget {
                                   'Science World',
                                   style: AppTheme.getVoucherValueStyle(context),
                                 ),
-                                const SizedBox(height: 35),
+                                const SizedBox(height: 25),
                                 Text(
                                   'Canoo Member Name',
                                   style: AppTheme.getVoucherTitleStyle(context),
                                 ),
                                 const SizedBox(height: 5),
                                 Text(
-                                  'CAM VINH GIANG',
+                                  'LUU CAT PHUONG NGUYEN',
                                   style: AppTheme.getVoucherValueStyle(context),
                                 ),
-                                const SizedBox(height: 35),
+                                const SizedBox(height: 20),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -116,7 +116,7 @@ class VoucherView extends ConsumerWidget {
                                     ),
                                   ],
                                 ),
-                                const SizedBox(height: 35),
+                                const SizedBox(height: 20),
                                 Text(
                                   'Check-in-on',
                                   style: AppTheme.getVoucherTitleStyle(context),
