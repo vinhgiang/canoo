@@ -100,7 +100,7 @@ class AppTheme {
         ),
         titleMedium: TextStyle(
           fontFamily: 'PPNeueMontreal',
-          fontSize: 22,
+          fontSize: 21,
           height: 1.27,
         ),
         titleLarge: TextStyle(
@@ -117,7 +117,7 @@ class AppTheme {
         ),
         bodyMedium: TextStyle(
           fontFamily: 'PPNeueMontreal',
-          fontSize: 15,
+          fontSize: 15.5,
           fontWeight: FontWeight.w500,
         ),
         bodyLarge: TextStyle(

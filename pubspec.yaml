@@ -43,6 +43,7 @@ dependencies:
   url_launcher: ^6.2.6
   pin_code_fields: ^8.0.1
   custom_radio_grouped_button: ^2.2.1
+  pixel_perfect: ^1.1.3
 
 dev_dependencies:
   flutter_test:
@@ -81,6 +82,8 @@ flutter:
     - assets/images/ziplines-in-the-classic.jpg
     - assets/images/canoo-into-canada.jpg
     - assets/images/canoo-voucher.png
+
+    - assets/design/home.jpg
     
     - assets/images/sponsors/cibc-bell.png
     - assets/images/sponsors/cibc-bell-color.png
