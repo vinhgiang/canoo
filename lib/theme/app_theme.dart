@@ -91,13 +91,16 @@ class AppTheme {
         headlineLarge: TextStyle(
           fontFamily: 'PPNeueMontreal',
           fontWeight: FontWeight.w600,
-          fontSize: 45,
+          fontSize: 42,
           height: 1.09,
         ),
+        // fixed with pixel perfect
         titleSmall: TextStyle(
           fontFamily: 'PPNeueMontreal',
-          fontSize: 16,
+          fontSize: 18,
+          height: 1.35,
         ),
+        // fixed with pixel perfect
         titleMedium: TextStyle(
           fontFamily: 'PPNeueMontreal',
           fontSize: 21,
@@ -115,6 +118,7 @@ class AppTheme {
           fontWeight: FontWeight.w500,
           color: Colors.grey,
         ),
+        // fixed with pixel perfect
         bodyMedium: TextStyle(
           fontFamily: 'PPNeueMontreal',
           fontSize: 15.5,

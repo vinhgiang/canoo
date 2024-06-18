@@ -25,8 +25,8 @@ class SliderItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.fromLTRB(10, 0, 5, 0),
-      width: 175,
+      margin: const EdgeInsets.fromLTRB(10, 0, 7, 0),
+      width: 151,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -56,7 +56,7 @@ class SliderItem extends StatelessWidget {
             Row(
               children: [
                 const Icon(Icons.calendar_today_outlined),
-                const SizedBox(width: 5),
+                const SizedBox(width: 2),
                 Text(
                   date!,
                   style: Theme.of(context).textTheme.bodySmall,
@@ -69,7 +69,7 @@ class SliderItem extends StatelessWidget {
             Row(
               children: [
                 const Icon(Icons.location_on_rounded),
-                const SizedBox(width: 5),
+                const SizedBox(width: 2),
                 Text(
                   address!,
                   style: Theme.of(context).textTheme.bodySmall,

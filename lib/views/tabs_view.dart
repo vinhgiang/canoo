@@ -64,7 +64,7 @@ class _TabsViewState extends ConsumerState<TabsView> {
     bool isAppBarVisible = menuIndex == 0 || menuIndex == 1 || menuIndex == 3;
 
     return PixelPerfect(
-      assetPath: 'assets/design/home.jpg',
+      assetPath: 'assets/design/pixel-perfect.jpg',
       scale: 3,
       child: Scaffold(
         appBar: isAppBarVisible

@@ -13,14 +13,12 @@ class OnThisWeek extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<SliderItem> items = onThisWeekEvents.map((event) {
-      final String provinceShort =
-          Utils.getProvinceShortForm(event.address.province);
+      final String provinceShort = Utils.getProvinceShortForm(event.address.province);
 
       String date = DateFormat("dd MMM, h:mm a").format(event.startDate);
       if (event.endDate != null) {
         final DateFormat dateFormat = DateFormat("dd MMM ''yy");
-        date =
-            '${dateFormat.format(event.startDate)} - ${dateFormat.format(event.endDate!)}';
+        date = '${dateFormat.format(event.startDate)} - ${dateFormat.format(event.endDate!)}';
       }
 
       return SliderItem(
@@ -34,7 +32,7 @@ class OnThisWeek extends StatelessWidget {
     }).toList();
 
     return SliderSection(
-      title: "what's on \nthis week",
+      title: "what’s on \nthis week",
       slider: HorizontalSlider(
         backgroundColor: Theme.of(context).colorScheme.onBackground,
         items: items,

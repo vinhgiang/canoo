@@ -18,7 +18,7 @@ class SliderSection extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            padding: const EdgeInsets.fromLTRB(10, 25, 10, 25),
+            padding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
             color: Theme.of(context).colorScheme.onBackground,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -28,14 +28,12 @@ class SliderSection extends StatelessWidget {
                   title,
                   style: Theme.of(context).textTheme.headlineLarge,
                 ),
-                const Row(
+                Row(
                   children: [
-                    Text('View all'),
-                    SizedBox(width: 5),
-                    Icon(
-                      FontAwesomeIcons.chevronRight,
-                      size: 12,
-                    ),
+                    Text('View all', style: Theme.of(context).textTheme.bodySmall),
+                    const SizedBox(width: 2),
+                    const Icon(FontAwesomeIcons.chevronRight, size: 10),
+                    const SizedBox(width: 3),
                   ],
                 ),
               ],

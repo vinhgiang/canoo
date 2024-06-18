@@ -6,7 +6,7 @@ class Greeting extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(20, 15, 20, 10),
+      padding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
