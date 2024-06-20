@@ -29,7 +29,7 @@ class _HomeViewState extends State<HomeView> with AutomaticKeepAliveClientMixin<
 
     return SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(10, 25, 10, 0),
+        padding: const EdgeInsets.fromLTRB(0, 25, 0, 0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,

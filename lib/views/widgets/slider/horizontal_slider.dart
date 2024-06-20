@@ -14,7 +14,7 @@ class HorizontalSlider extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: backgroundColor,
-      padding: const EdgeInsets.fromLTRB(10, 5, 10, 20),
+      padding: const EdgeInsets.fromLTRB(10, 5, 0, 20),
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(

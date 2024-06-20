@@ -12,7 +12,7 @@ class AppTheme {
         );
   }
 
-  // fixed with pixel perfect
+  // this is the same as the default style, not large. can be fixed
   static ButtonStyle getPrimaryButtonLargeStyle(BuildContext context) {
     return ElevatedButton.styleFrom(
       padding: const EdgeInsets.fromLTRB(26, 14, 26, 14),
@@ -144,12 +144,19 @@ class AppTheme {
           ),
         ),
       ),
+      // fixed with pixel perfect
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           foregroundColor: Colors.black,
           backgroundColor: Colors.yellow,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(0),
+          ),
+          padding: const EdgeInsets.fromLTRB(26, 14, 26, 14),
+          textStyle: const TextStyle(
+            fontFamily: 'PPNeueMontreal',
+            fontSize: 18,
+            height: 1.35,
           ),
         ),
       ),

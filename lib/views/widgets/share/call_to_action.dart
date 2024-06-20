@@ -16,7 +16,7 @@ class CallToAction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(10, 25, 10, 15),
+      padding: const EdgeInsets.fromLTRB(20, 25, 20, 15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -34,7 +34,6 @@ class CallToAction extends StatelessWidget {
           const SizedBox(height: 15),
           ElevatedButton(
             onPressed: () {},
-            style: AppTheme.getPrimaryButtonLargeStyle(context),
             child: const Text('Explore now'),
           ),
         ],

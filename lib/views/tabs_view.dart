@@ -172,8 +172,8 @@ class _TabsViewState extends ConsumerState<TabsView> {
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.map_outlined, size: 20),
-                      SizedBox(width: 10),
+                      Icon(Icons.map_outlined, size: 15),
+                      SizedBox(width: 5),
                       Text('Map View'),
                     ],
                   ),
