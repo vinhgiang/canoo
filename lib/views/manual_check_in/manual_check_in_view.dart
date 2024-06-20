@@ -14,7 +14,7 @@ class ManualCheckInView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.fromLTRB(35, 170, 35, 0),
+      padding: const EdgeInsets.fromLTRB(40, 160, 40, 0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -22,9 +22,9 @@ class ManualCheckInView extends StatelessWidget {
           const SizedBox(height: 20),
           Text(
             'You can ask staff at the venue for the unique 4-digit Canoo code.',
-            style: Theme.of(context).textTheme.bodyLarge,
+            style: Theme.of(context).textTheme.bodyMedium,
           ),
-          const SizedBox(height: 40),
+          const SizedBox(height: 25),
           PinCodeTextField(
             appContext: context,
             length: 4,
@@ -48,7 +48,7 @@ class ManualCheckInView extends StatelessWidget {
             },
             onChanged: (value) {},
           ),
-          const SizedBox(height: 50),
+          const SizedBox(height: 40),
           TextButton(
             onPressed: () {},
             child: const Text('Scan QR code'),

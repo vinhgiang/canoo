@@ -52,7 +52,6 @@ class CheckInInstruction extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
-                      style: AppTheme.getPrimaryButtonLargeStyle(context),
                       onPressed: () {
                         NavigationService().navigateTo('/voucher');
                       },

@@ -138,7 +138,6 @@ class VoucherView extends ConsumerWidget {
                         onPressed: () {
                           NavigationService().navigateTo('/check-in-completed');
                         },
-                        style: AppTheme.getPrimaryButtonLargeStyle(context),
                         child: const Text(
                           'Complete my check-in',
                         ),

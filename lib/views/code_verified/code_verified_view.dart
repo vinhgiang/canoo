@@ -83,7 +83,6 @@ class CodeVerifiedView extends ConsumerWidget {
                           width: MediaQuery.of(context).size.width,
                           child: ElevatedButton(
                             onPressed: () => _checkin(context),
-                            style: AppTheme.getPrimaryButtonLargeStyle(context),
                             child: const Text('Tap here to check in'),
                           ),
                         )

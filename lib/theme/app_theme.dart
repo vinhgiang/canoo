@@ -79,9 +79,10 @@ class AppTheme {
           fontSize: 90,
           fontWeight: FontWeight.w600,
         ),
+        // fixed with pixel perfect
         headlineSmall: TextStyle(
           fontFamily: 'PPNeueMontreal',
-          fontSize: 30,
+          fontSize: 28.5,
           fontWeight: FontWeight.w600,
         ),
         headlineMedium: TextStyle(
@@ -124,6 +125,7 @@ class AppTheme {
           fontFamily: 'PPNeueMontreal',
           fontSize: 15.5,
           fontWeight: FontWeight.w500,
+          height: 1.29,
         ),
         bodyLarge: TextStyle(
           fontFamily: 'PPNeueMontreal',
@@ -160,13 +162,18 @@ class AppTheme {
           ),
         ),
       ),
-      // TODO: move this to buttonStyle so that we can use elevatedButton
+      // fixed with pixel perfect
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
           foregroundColor: Colors.white, // Text color
           backgroundColor: Colors.white10, // Background color
           shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-          padding: const EdgeInsets.only(left: 25, right: 25),
+          padding: const EdgeInsets.fromLTRB(26, 14, 26, 14),
+          textStyle: const TextStyle(
+            fontFamily: 'PPNeueMontreal',
+            fontSize: 18,
+            height: 1.35,
+          ),
         ),
       ),
       cardTheme: const CardTheme(

@@ -71,7 +71,6 @@ class CheckInCompleted extends StatelessWidget {
                         SizedBox(
                           width: double.infinity,
                           child: ElevatedButton(
-                            style: AppTheme.getPrimaryButtonLargeStyle(context),
                             onPressed: () {},
                             child: const Text('Donate now'),
                           ),
@@ -80,7 +79,6 @@ class CheckInCompleted extends StatelessWidget {
                         SizedBox(
                           width: double.infinity,
                           child: TextButton(
-                            style: AppTheme.getPrimaryButtonLargeStyle(context),
                             onPressed: () {},
                             child: const Text('Remind me later'),
                           ),
