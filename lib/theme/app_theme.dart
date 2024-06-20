@@ -12,10 +12,11 @@ class AppTheme {
         );
   }
 
+  // fixed with pixel perfect
   static ButtonStyle getPrimaryButtonLargeStyle(BuildContext context) {
     return ElevatedButton.styleFrom(
-      padding: const EdgeInsets.all(15),
-      textStyle: Theme.of(context).textTheme.titleMedium,
+      padding: const EdgeInsets.fromLTRB(26, 14, 26, 14),
+      textStyle: Theme.of(context).textTheme.titleSmall,
     );
   }
 
@@ -112,11 +113,11 @@ class AppTheme {
           fontSize: 27,
           height: 1.1,
         ),
+        // fixed with pixel perfect
         bodySmall: TextStyle(
           fontFamily: 'PPNeueMontreal',
-          fontSize: 13,
+          fontSize: 12,
           fontWeight: FontWeight.w500,
-          color: Colors.grey,
         ),
         // fixed with pixel perfect
         bodyMedium: TextStyle(

@@ -1,3 +1,4 @@
+import 'package:canoo/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class CallToAction extends StatelessWidget {
@@ -27,12 +28,13 @@ class CallToAction extends StatelessWidget {
             const SizedBox(height: 5),
             Text(
               description ?? '',
-              style: Theme.of(context).textTheme.bodyMedium,
+              style: Theme.of(context).textTheme.bodySmall,
             ),
           ],
-          const SizedBox(height: 5),
+          const SizedBox(height: 15),
           ElevatedButton(
             onPressed: () {},
+            style: AppTheme.getPrimaryButtonLargeStyle(context),
             child: const Text('Explore now'),
           ),
         ],
