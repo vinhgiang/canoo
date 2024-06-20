@@ -14,7 +14,7 @@ class CuratedForYou extends StatelessWidget {
         items: [
           Container(
             width: MediaQuery.of(context).size.width * 0.75,
-            margin: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+            margin: const EdgeInsets.fromLTRB(20, 0, 10, 0),
             child: Image.asset('assets/images/banners/canada-culture.jpg'),
           ),
           Container(

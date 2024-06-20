@@ -68,8 +68,7 @@ List<Event> onThisWeekEvents = [
   ),
   Event(
     name: 'Currator-Led Tours of Toronto Gone Wild',
-    thumbnail:
-        Image.asset('assets/images/events/toronto_gone_wild_curator_tours.png'),
+    thumbnail: Image.asset('assets/images/events/toronto_gone_wild_curator_tours.png'),
     startDate: DateTime(2024, 4, 10),
     endDate: DateTime(2024, 8, 3),
     address: Address(
@@ -117,6 +116,7 @@ List<SliderItem> deals = [
     category: Category.train,
     icon: CategoryIcon.icons[Category.train]!,
     description: '50% off Travel Valid until: 20 May \'25',
+    isFirst: true,
   ),
   SliderItem(
     name: 'Bow Habitat Station - Discovery Centre',

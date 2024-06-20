@@ -22,7 +22,7 @@ class Explore extends StatelessWidget {
             Container(
               width: 150,
               height: 155,
-              margin: const EdgeInsets.fromLTRB(10, 0, 5, 0),
+              margin: const EdgeInsets.fromLTRB(20, 0, 5, 0),
               child: Column(
                 children: [
                   Container(

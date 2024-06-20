@@ -12,6 +12,7 @@ class OnThisWeek extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isFirst = true;
     final List<SliderItem> items = onThisWeekEvents.map((event) {
       final String provinceShort = Utils.getProvinceShortForm(event.address.province);
 
@@ -21,14 +22,19 @@ class OnThisWeek extends StatelessWidget {
         date = '${dateFormat.format(event.startDate)} - ${dateFormat.format(event.endDate!)}';
       }
 
-      return SliderItem(
+      final item = SliderItem(
         name: event.name,
         thumbnail: event.thumbnail!,
         address: '${event.address.city} , $provinceShort',
         category: event.category,
         date: date,
         icon: CategoryIcon.icons[event.category]!,
+        isFirst: isFirst,
       );
+
+      isFirst = false;
+
+      return item;
     }).toList();
 
     return SliderSection(

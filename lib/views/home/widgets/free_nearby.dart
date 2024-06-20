@@ -19,6 +19,7 @@ class FreeNearby extends StatelessWidget {
         address: 'Calgary, AB',
         category: Category.museum,
         icon: CategoryIcon.icons[Category.museum]!,
+        isFirst: true,
       ),
       SliderItem(
         name: 'Contemporary Calgary',

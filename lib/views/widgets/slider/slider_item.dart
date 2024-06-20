@@ -10,6 +10,7 @@ class SliderItem extends StatelessWidget {
   final String? address;
   final String? date;
   final String? description;
+  final bool? isFirst;
 
   const SliderItem({
     super.key,
@@ -20,12 +21,15 @@ class SliderItem extends StatelessWidget {
     this.address,
     this.description,
     this.date,
+    this.isFirst = false,
   });
 
   @override
   Widget build(BuildContext context) {
+    final double marginLeft = isFirst! ? 20 : 10;
+
     return Container(
-      margin: const EdgeInsets.fromLTRB(10, 0, 7, 0),
+      margin: EdgeInsets.fromLTRB(marginLeft, 0, 7, 0),
       width: 151,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
