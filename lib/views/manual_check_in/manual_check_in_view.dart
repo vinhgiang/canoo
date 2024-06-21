@@ -26,6 +26,8 @@ class ManualCheckInView extends StatelessWidget {
           ),
           const SizedBox(height: 25),
           PinCodeTextField(
+            // this line is added to fix the issue a TextEditingController was used after being disposed
+            autoDisposeControllers: false,
             appContext: context,
             length: 4,
             obscureText: false,
