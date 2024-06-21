@@ -20,7 +20,7 @@ class ProfileOverView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.fromLTRB(35, 25, 35, 25),
+      padding: const EdgeInsets.fromLTRB(35, 0, 35, 18),
       color: Theme.of(context).colorScheme.tertiary,
       child: Column(
         children: [
@@ -46,26 +46,25 @@ class ProfileOverView extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(width: 35),
+              const SizedBox(width: 33),
               Expanded(
                 child: Container(
                   color: Theme.of(context).colorScheme.onTertiaryContainer,
-                  padding: const EdgeInsets.only(top: 10),
+                  padding: const EdgeInsets.only(top: 6),
                   child: Column(
                     children: [
                       Text(
                         'YEAR',
-                        style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                        style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                               color: Theme.of(context).colorScheme.onTertiary.withOpacity(0.5),
                               fontWeight: FontWeight.w600,
                             ),
                       ),
                       Text(
                         '1',
-                        style: Theme.of(context)
-                            .textTheme
-                            .displayMedium!
-                            .copyWith(color: Theme.of(context).colorScheme.onTertiary),
+                        style: Theme.of(context).textTheme.displaySmall!.copyWith(
+                              color: Theme.of(context).colorScheme.onTertiary,
+                            ),
                       ),
                     ],
                   ),
@@ -85,7 +84,7 @@ class ProfileOverView extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    '\$40.35',
+                    '\$85.65',
                     style: Theme.of(context).textTheme.titleMedium!.copyWith(
                           color: Theme.of(context).colorScheme.onTertiary,
                           fontWeight: FontWeight.w600,

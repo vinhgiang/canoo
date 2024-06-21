@@ -69,6 +69,7 @@ class AppTheme {
         color: Colors.grey,
       ),
       textTheme: const TextTheme(
+        // fixed with pixel perfect
         displaySmall: TextStyle(
           fontFamily: 'PPNeueMontreal',
           fontSize: 80,
@@ -85,10 +86,11 @@ class AppTheme {
           fontSize: 28.5,
           fontWeight: FontWeight.w600,
         ),
+        // fixed with pixel perfect
         headlineMedium: TextStyle(
           fontFamily: 'PPNeueMontreal',
           fontWeight: FontWeight.w600,
-          fontSize: 37,
+          fontSize: 33.3,
         ),
         headlineLarge: TextStyle(
           fontFamily: 'PPNeueMontreal',
@@ -108,11 +110,12 @@ class AppTheme {
           fontSize: 21,
           height: 1.27,
         ),
+        // fixed with pixel perfect
         titleLarge: TextStyle(
           fontFamily: 'PPNeueMontreal',
           fontWeight: FontWeight.w600,
-          fontSize: 27,
-          height: 1.1,
+          fontSize: 24,
+          height: 1.07,
         ),
         // fixed with pixel perfect
         bodySmall: TextStyle(
@@ -127,22 +130,34 @@ class AppTheme {
           fontWeight: FontWeight.w500,
           height: 1.29,
         ),
+        // fixed with pixel perfect
         bodyLarge: TextStyle(
           fontFamily: 'PPNeueMontreal',
           fontWeight: FontWeight.w500,
-          fontSize: 17.8,
-          height: 1.2,
+          fontSize: 17,
+          height: 1.25,
         ),
+        // fixed with pixel perfect
         labelSmall: TextStyle(
           fontFamily: 'PPNeueMontreal',
-          fontSize: 16,
+          fontSize: 14,
           color: Colors.grey,
+        ),
+        // fixed with pixel perfect
+        labelLarge: TextStyle(
+          fontFamily: 'PPNeueMontreal',
+          fontSize: 20,
+          height: 1.2,
+          letterSpacing: 0,
         ),
       ),
       iconButtonTheme: IconButtonThemeData(
         style: ButtonStyle(
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+          ),
+          padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+            const EdgeInsets.all(0),
           ),
         ),
       ),

@@ -11,8 +11,11 @@ class ProfileView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.tertiary,
-        leading: BackArrow(
-          color: Theme.of(context).colorScheme.onTertiary,
+        leading: Padding(
+          padding: const EdgeInsets.only(bottom: 40),
+          child: BackArrow(
+            color: Theme.of(context).colorScheme.onTertiary,
+          ),
         ),
       ),
       body: Column(
