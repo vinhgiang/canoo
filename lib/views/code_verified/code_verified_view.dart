@@ -1,6 +1,7 @@
 import 'package:canoo/theme/app_theme.dart';
 import 'package:canoo/view_models/code_verified_view_model.dart';
 import 'package:canoo/views/code_verified/widgets/check_in_instruction.dart';
+import 'package:canoo/views/widgets/share/back_arrow.dart';
 import 'package:custom_radio_grouped_button/custom_radio_grouped_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -26,31 +27,36 @@ class CodeVerifiedView extends ConsumerWidget {
 
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.onBackground,
-      appBar: AppBar(),
+      appBar: AppBar(
+        leading: const Padding(
+          padding: EdgeInsets.only(bottom: 40),
+          child: BackArrow(),
+        ),
+      ),
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Container(
-              padding: const EdgeInsets.fromLTRB(35, 0, 35, 50),
+              padding: const EdgeInsets.fromLTRB(40, 0, 35, 45),
               color: Theme.of(context).colorScheme.background,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text('Code verified successfully!',
                       style: Theme.of(context).textTheme.titleLarge),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 13),
                   Text('You are just a step away from exploring',
-                      style: Theme.of(context).textTheme.bodyLarge),
+                      style: Theme.of(context).textTheme.labelMedium),
                   const SizedBox(height: 5),
                   Text('Heritage Park Historical Village.',
-                      style: Theme.of(context).textTheme.bodyLarge)
+                      style: Theme.of(context).textTheme.labelMedium)
                 ],
               ),
             ),
             Expanded(
               child: Container(
-                padding: const EdgeInsets.fromLTRB(35, 50, 35, 0),
+                padding: const EdgeInsets.fromLTRB(40, 48, 35, 0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -64,10 +70,10 @@ class CodeVerifiedView extends ConsumerWidget {
                       children: [
                         CustomRadioButton(
                           unSelectedColor: Theme.of(context).colorScheme.onBackground,
-                          margin: const EdgeInsets.all(0),
+                          margin: const EdgeInsets.all(1),
                           selectedColor: Theme.of(context).colorScheme.primary,
-                          width: 64,
-                          height: 64,
+                          width: 60,
+                          height: 60,
                           elevation: 0,
                           enableButtonWrap: true,
                           wrapAlignment: WrapAlignment.end,

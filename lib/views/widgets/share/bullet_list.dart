@@ -28,7 +28,7 @@ class BulletList extends StatelessWidget {
                   child: Text(
                     str,
                     softWrap: true,
-                    style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                    style: Theme.of(context).textTheme.labelSmall!.copyWith(
                           color: Theme.of(context).colorScheme.onPrimary,
                           height: 1.4,
                         ),
@@ -36,7 +36,7 @@ class BulletList extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 15),
+            const SizedBox(height: 20),
           ],
         );
       }).toList(),

@@ -46,7 +46,7 @@ class ProfileOverView extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(width: 33),
+              const SizedBox(width: 30),
               Expanded(
                 child: Container(
                   color: Theme.of(context).colorScheme.onTertiaryContainer,
@@ -62,7 +62,7 @@ class ProfileOverView extends StatelessWidget {
                       ),
                       Text(
                         '1',
-                        style: Theme.of(context).textTheme.displaySmall!.copyWith(
+                        style: Theme.of(context).textTheme.displayMedium!.copyWith(
                               color: Theme.of(context).colorScheme.onTertiary,
                             ),
                       ),

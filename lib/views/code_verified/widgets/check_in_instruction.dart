@@ -16,13 +16,13 @@ class CheckInInstruction extends StatelessWidget {
         children: [
           Container(
             color: AppTheme.sponsoredByContainerBg,
-            padding: const EdgeInsets.all(35),
+            padding: const EdgeInsets.all(30),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   'Sponsored By',
-                  style: Theme.of(context).textTheme.labelLarge!.copyWith(
+                  style: Theme.of(context).textTheme.labelSmall!.copyWith(
                         color: Theme.of(context).colorScheme.onPrimary,
                       ),
                 ),
@@ -38,7 +38,7 @@ class CheckInInstruction extends StatelessWidget {
           Expanded(
             child: Container(
               color: Theme.of(context).colorScheme.inverseSurface,
-              padding: const EdgeInsets.all(35),
+              padding: const EdgeInsets.only(left: 35, top: 35, right: 30, bottom: 30),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

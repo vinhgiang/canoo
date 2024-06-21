@@ -31,13 +31,13 @@ class AppTheme {
   }
 
   static TextStyle getVoucherValueStyle(BuildContext context) {
-    return Theme.of(context).textTheme.titleMedium!.copyWith(
+    return Theme.of(context).textTheme.titleSmall!.copyWith(
           color: Theme.of(context).colorScheme.onInverseSurface,
         );
   }
 
   static TextStyle getVoucherTitleStyle(BuildContext context) {
-    return Theme.of(context).textTheme.bodyLarge!.copyWith(
+    return Theme.of(context).textTheme.labelSmall!.copyWith(
           color: Theme.of(context).colorScheme.secondary,
         );
   }
@@ -72,12 +72,13 @@ class AppTheme {
         // fixed with pixel perfect
         displaySmall: TextStyle(
           fontFamily: 'PPNeueMontreal',
-          fontSize: 80,
+          fontSize: 75,
           fontWeight: FontWeight.w600,
         ),
+        // fixed with pixel perfect
         displayMedium: TextStyle(
           fontFamily: 'PPNeueMontreal',
-          fontSize: 90,
+          fontSize: 80,
           fontWeight: FontWeight.w600,
         ),
         // fixed with pixel perfect
@@ -91,11 +92,13 @@ class AppTheme {
           fontFamily: 'PPNeueMontreal',
           fontWeight: FontWeight.w600,
           fontSize: 33.3,
+          height: 1.2,
         ),
+        // fixed with pixel perfect
         headlineLarge: TextStyle(
           fontFamily: 'PPNeueMontreal',
           fontWeight: FontWeight.w600,
-          fontSize: 42,
+          fontSize: 44.5,
           height: 1.09,
         ),
         // fixed with pixel perfect
@@ -116,6 +119,7 @@ class AppTheme {
           fontWeight: FontWeight.w600,
           fontSize: 24,
           height: 1.07,
+          letterSpacing: 0.3,
         ),
         // fixed with pixel perfect
         bodySmall: TextStyle(
@@ -142,6 +146,12 @@ class AppTheme {
           fontFamily: 'PPNeueMontreal',
           fontSize: 14,
           color: Colors.grey,
+          height: 1.58,
+        ),
+        // fixed with pixel perfect
+        labelMedium: TextStyle(
+          fontFamily: 'PPNeueMontreal',
+          fontSize: 15.9,
         ),
         // fixed with pixel perfect
         labelLarge: TextStyle(

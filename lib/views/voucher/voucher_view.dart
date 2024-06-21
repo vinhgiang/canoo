@@ -20,13 +20,13 @@ class VoucherView extends ConsumerWidget {
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(35, 5, 35, 0),
+          padding: const EdgeInsets.fromLTRB(30, 5, 30, 0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Image.asset('assets/images/canoo-voucher.png'),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -37,14 +37,14 @@ class VoucherView extends ConsumerWidget {
                         children: [
                           Container(
                             color: Theme.of(context).colorScheme.tertiary,
-                            padding: const EdgeInsets.fromLTRB(25, 15, 25, 15),
+                            padding: const EdgeInsets.fromLTRB(23, 17, 23, 17),
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
                                 Text('100%', style: AppTheme.discountPercentageTextStyle(context)),
                                 Text(
                                   'off',
-                                  style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                                  style: Theme.of(context).textTheme.titleSmall!.copyWith(
                                         color: Theme.of(context).colorScheme.onTertiary,
                                         fontWeight: FontWeight.w600,
                                       ),
@@ -54,12 +54,12 @@ class VoucherView extends ConsumerWidget {
                           ),
                           Image.asset(
                             'assets/images/places/science-world.jpg',
-                            height: 140,
+                            height: 147,
                             width: double.infinity,
                             fit: BoxFit.cover,
                           ),
                           Container(
-                            padding: const EdgeInsets.fromLTRB(25, 15, 25, 15),
+                            padding: const EdgeInsets.all(20),
                             color: Theme.of(context).colorScheme.inverseSurface,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -73,12 +73,11 @@ class VoucherView extends ConsumerWidget {
                                   'Canoo Member Name',
                                   style: AppTheme.getVoucherTitleStyle(context),
                                 ),
-                                const SizedBox(height: 5),
                                 Text(
-                                  'LUU CAT PHUONG NGUYEN',
+                                  'XUAN MAI NGO',
                                   style: AppTheme.getVoucherValueStyle(context),
                                 ),
-                                const SizedBox(height: 20),
+                                const SizedBox(height: 25),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -118,7 +117,7 @@ class VoucherView extends ConsumerWidget {
                                 ),
                                 const SizedBox(height: 20),
                                 Text(
-                                  'Check-in-on',
+                                  'Check-in on',
                                   style: AppTheme.getVoucherTitleStyle(context),
                                 ),
                                 const SizedBox(height: 5),

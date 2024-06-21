@@ -15,26 +15,39 @@ class CheckInCompleted extends StatelessWidget {
           children: [
             Container(
               color: Theme.of(context).colorScheme.onBackground,
-              padding: const EdgeInsets.fromLTRB(35, 65, 35, 25),
+              padding: const EdgeInsets.fromLTRB(40, 55, 40, 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Text(
-                    'You’re in.',
-                    style: Theme.of(context).textTheme.headlineLarge,
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text(
+                        'You’re in. ',
+                        style: Theme.of(context).textTheme.headlineLarge!.copyWith(height: 0.8),
+                      ),
+                      SizedBox(
+                        width: 75,
+                        child: Container(
+                          color: Theme.of(context).colorScheme.primary,
+                          height: 13,
+                          width: double.infinity,
+                        ),
+                      ),
+                    ],
                   ),
-                  const SizedBox(height: 35),
+                  const SizedBox(height: 30),
                   Text(
-                    'Enjoy your visit to Science World.',
-                    style: Theme.of(context).textTheme.bodyLarge,
+                    'Enjoy your visit to Heritage Park Historical Village',
+                    style: Theme.of(context).textTheme.bodyMedium,
                   ),
-                  const SizedBox(height: 35),
+                  const SizedBox(height: 20),
                   Text(
                     'You saved',
-                    style: Theme.of(context).textTheme.bodyLarge,
+                    style: Theme.of(context).textTheme.bodyMedium,
                   ),
                   Text(
-                    '\$ 30.40',
+                    '\$ 14.90',
                     style: Theme.of(context).textTheme.headlineSmall,
                   ),
                 ],
@@ -42,7 +55,7 @@ class CheckInCompleted extends StatelessWidget {
             ),
             Expanded(
               child: Container(
-                padding: const EdgeInsets.fromLTRB(35, 25, 35, 0),
+                padding: const EdgeInsets.fromLTRB(40, 25, 40, 0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -56,12 +69,12 @@ class CheckInCompleted extends StatelessWidget {
                         const SizedBox(height: 10),
                         Text(
                           'Invest in a Canada where every',
-                          style: Theme.of(context).textTheme.bodyLarge,
+                          style: Theme.of(context).textTheme.bodyMedium,
                         ),
-                        const SizedBox(height: 5),
+                        const SizedBox(height: 4),
                         Text(
                           'newcomer feels like they belong.',
-                          style: Theme.of(context).textTheme.bodyLarge,
+                          style: Theme.of(context).textTheme.bodyMedium,
                         ),
                       ],
                     ),
