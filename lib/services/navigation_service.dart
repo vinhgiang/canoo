@@ -1,5 +1,7 @@
 // Singleton NavigationService
+import 'package:canoo/providers/bottom_navigator_provider.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class NavigationService {
   // When instatiating the class, the factory constructor will be called
@@ -24,8 +26,8 @@ class NavigationService {
     navigatorKey.currentState!.pop();
   }
 
-  void goHome(PageController pageController) {
+  void goHome(WidgetRef ref) {
+    ref.read(bottomNavigatorProvider.notifier).updateIndex(0);
     navigatorKey.currentState!.popUntil((route) => route.isFirst);
-    pageController.jumpToPage(0);
   }
 }

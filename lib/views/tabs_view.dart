@@ -1,4 +1,5 @@
 import 'package:canoo/providers/bottom_navigator_provider.dart';
+import 'package:canoo/providers/page_controller_provider.dart';
 import 'package:canoo/services/navigation_service.dart';
 import 'package:canoo/views/home/home_view.dart';
 import 'package:canoo/views/manual_check_in/manual_check_in_view.dart';
@@ -32,7 +33,7 @@ class _TabsViewState extends ConsumerState<TabsView> {
   int menuIndex = 0;
 
   List<Widget> _views = [];
-  PageController _pageController = PageController();
+  late PageController _pageController;
 
   @override
   void initState() {
@@ -46,13 +47,12 @@ class _TabsViewState extends ConsumerState<TabsView> {
       const MoreView(),
     ];
 
-    _pageController = PageController(initialPage: menuIndex);
+    _pageController = ref.read(pageControllerProvider);
   }
 
   @override
   void dispose() {
     _pageController.dispose();
-
     super.dispose();
   }
 
@@ -176,7 +176,7 @@ class _TabsViewState extends ConsumerState<TabsView> {
               ),
             )
           : null,
-      bottomNavigationBar: BottomNavigator(pageController: _pageController),
+      bottomNavigationBar: const BottomNavigator(),
     );
   }
 }

@@ -4,12 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BottomNavigator extends ConsumerStatefulWidget {
-  final PageController pageController;
-
-  const BottomNavigator({
-    super.key,
-    required this.pageController,
-  });
+  const BottomNavigator({super.key});
 
   @override
   ConsumerState<BottomNavigator> createState() {
@@ -140,7 +135,6 @@ class _BottomNavigatorState extends ConsumerState<BottomNavigator> {
       ],
       onTap: (index) {
         ref.read(bottomNavigatorProvider.notifier).updateIndex(index);
-        widget.pageController.jumpToPage(index);
       },
     );
   }
