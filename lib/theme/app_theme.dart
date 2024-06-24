@@ -48,7 +48,7 @@ class AppTheme {
       colorScheme: const ColorScheme(
         brightness: Brightness.dark,
         background: Colors.black,
-        onBackground: Colors.white10,
+        onBackground: Color.fromRGBO(26, 26, 26, 1),
         primary: Colors.yellow,
         onPrimary: Colors.black,
         secondary: Colors.grey,
