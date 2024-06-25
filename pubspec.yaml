@@ -82,12 +82,13 @@ flutter:
     - assets/images/ziplines-in-the-classic.jpg
     - assets/images/canoo-into-canada.jpg
     - assets/images/canoo-voucher.png
+    - assets/images/favourites-empty.png
 
-    - assets/design/pixel-perfect.jpg
     - assets/design/profile.jpg
     - assets/design/check-in-instruction.jpg
     - assets/design/voucher.jpg
     - assets/design/check-in-completed.jpg
+    - assets/design/favourites.jpg
     
     - assets/images/sponsors/cibc-bell.png
     - assets/images/sponsors/cibc-bell-color.png

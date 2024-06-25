@@ -104,6 +104,7 @@ class AppTheme {
         // fixed with pixel perfect
         titleSmall: TextStyle(
           fontFamily: 'PPNeueMontreal',
+          fontWeight: FontWeight.w600,
           fontSize: 18,
           height: 1.35,
         ),

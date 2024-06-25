@@ -46,7 +46,6 @@ class VoucherView extends ConsumerWidget {
                                   'off',
                                   style: Theme.of(context).textTheme.titleSmall!.copyWith(
                                         color: Theme.of(context).colorScheme.onTertiary,
-                                        fontWeight: FontWeight.w600,
                                       ),
                                 ),
                               ],
