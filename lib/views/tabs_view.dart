@@ -1,11 +1,11 @@
 import 'package:canoo/providers/bottom_navigator_provider.dart';
 import 'package:canoo/providers/page_controller_provider.dart';
 import 'package:canoo/services/navigation_service.dart';
+import 'package:canoo/views/explore/explore_view.dart';
 import 'package:canoo/views/favourites/favourites_view.dart';
 import 'package:canoo/views/home/home_view.dart';
 import 'package:canoo/views/manual_check_in/manual_check_in_view.dart';
 import 'package:canoo/views/more/more_view.dart';
-import 'package:canoo/views/pre_loader/pre_loader_view.dart';
 import 'package:canoo/views/widgets/bottom_navigator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -30,31 +30,43 @@ class TabsView extends ConsumerStatefulWidget {
   }
 }
 
-class _TabsViewState extends ConsumerState<TabsView> {
+class _TabsViewState extends ConsumerState<TabsView> with SingleTickerProviderStateMixin {
   int _selectedCityIndex = -1;
   int menuIndex = 0;
 
   List<Widget> _views = [];
   late PageController _pageController;
+  late TabController _tabController;
 
   @override
   void initState() {
     super.initState();
 
+    _pageController = ref.read(pageControllerProvider);
+    _tabController = TabController(length: 3, vsync: this);
+
+    _tabController.addListener(() {
+      if (!_tabController.indexIsChanging) {
+        _pageController.jumpToPage(_tabController.index + 5);
+      }
+    });
+
     _views = [
       const HomeView(),
-      const PreLoaderView(),
+      const ExploreView(),
       ManualCheckInView(),
       const FavouritesView(),
       const MoreView(),
+      const ExploreView(),
+      const Text('Second tab'),
+      const Text('Thirth tab'),
     ];
-
-    _pageController = ref.read(pageControllerProvider);
   }
 
   @override
   void dispose() {
     _pageController.dispose();
+    _tabController.dispose();
     super.dispose();
   }
 
@@ -63,9 +75,10 @@ class _TabsViewState extends ConsumerState<TabsView> {
     menuIndex = ref.watch(bottomNavigatorProvider);
 
     bool isAppBarVisible = menuIndex == 0 || menuIndex == 1 || menuIndex == 3;
+    bool isTabBarVisible = menuIndex == 1;
 
     return PixelPerfect(
-      assetPath: 'assets/design/favourites.jpg',
+      assetPath: 'assets/design/explore-1.jpg',
       scale: 3,
       child: Scaffold(
         appBar: isAppBarVisible
@@ -136,11 +149,14 @@ class _TabsViewState extends ConsumerState<TabsView> {
                 ),
                 actions: [
                   Padding(
-                    padding: const EdgeInsets.only(right: 10),
+                    padding: const EdgeInsets.only(right: 20, bottom: 30),
                     child: Row(
                       children: [
                         IconButton(
-                          icon: const Icon(FontAwesomeIcons.magnifyingGlass),
+                          icon: const Icon(
+                            FontAwesomeIcons.magnifyingGlass,
+                            size: 20,
+                          ),
                           onPressed: () {},
                         ),
                         const SizedBox(width: 10),
@@ -157,6 +173,16 @@ class _TabsViewState extends ConsumerState<TabsView> {
                     ),
                   )
                 ],
+                bottom: isTabBarVisible
+                    ? TabBar(
+                        controller: _tabController,
+                        tabs: const [
+                          Tab(icon: Icon(Icons.directions_car)),
+                          Tab(icon: Icon(Icons.directions_transit)),
+                          Tab(icon: Icon(Icons.directions_bike)),
+                        ],
+                      )
+                    : null,
               )
             : null,
         resizeToAvoidBottomInset: false,
