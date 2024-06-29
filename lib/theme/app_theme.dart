@@ -202,6 +202,19 @@ class AppTheme {
           ),
         ),
       ),
+      filledButtonTheme: FilledButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          foregroundColor: Colors.black,
+          backgroundColor: Colors.white,
+          padding: const EdgeInsets.only(left: 17, right: 17),
+          minimumSize: const Size(30, 32),
+          textStyle: const TextStyle(
+            fontFamily: 'PPNeueMontreal',
+            fontSize: 14,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      ),
       cardTheme: const CardTheme(
         // This is for CustomRadioButton because that package uses Card behind the scenes
         shape: RoundedRectangleBorder(

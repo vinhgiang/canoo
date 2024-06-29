@@ -176,10 +176,15 @@ class _TabsViewState extends ConsumerState<TabsView> with SingleTickerProviderSt
                 bottom: isTabBarVisible
                     ? TabBar(
                         controller: _tabController,
+                        labelStyle: Theme.of(context).textTheme.bodyMedium,
+                        padding: const EdgeInsets.only(left: 20, right: 20),
+                        indicatorColor: Theme.of(context).colorScheme.onSurface,
+                        indicatorSize: TabBarIndicatorSize.tab,
+                        indicatorWeight: 1,
                         tabs: const [
-                          Tab(icon: Icon(Icons.directions_car)),
-                          Tab(icon: Icon(Icons.directions_transit)),
-                          Tab(icon: Icon(Icons.directions_bike)),
+                          Tab(text: 'places'),
+                          Tab(text: 'events'),
+                          Tab(text: 'deals'),
                         ],
                       )
                     : null,
