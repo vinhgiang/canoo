@@ -78,7 +78,7 @@ class _TabsViewState extends ConsumerState<TabsView> with SingleTickerProviderSt
     bool isTabBarVisible = menuIndex == 1;
 
     return PixelPerfect(
-      assetPath: 'assets/design/explore-2.jpg',
+      assetPath: 'assets/design/explore-3.jpg',
       scale: 3,
       child: Scaffold(
         appBar: isAppBarVisible
