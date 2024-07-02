@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 
 class ExploreView extends StatelessWidget {
@@ -46,7 +47,63 @@ class ExploreView extends StatelessWidget {
                         semanticsLabel: 'Museum',
                       ),
                     ),
+                  ),
+                  Positioned(
+                    bottom: 20,
+                    left: 15,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          'The Hangar Flight Museum',
+                          style: Theme.of(context).textTheme.titleLarge,
+                        ),
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.location_on_rounded,
+                              color: Theme.of(context).colorScheme.onSurface,
+                            ),
+                            const SizedBox(width: 2),
+                            Text(
+                              'Calgary, AB',
+                              style: Theme.of(context).textTheme.labelSmall!.copyWith(
+                                    color: Theme.of(context).colorScheme.onSurface,
+                                  ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   )
+                ],
+              ),
+              GridView(
+                // these 2 properties are important when wrapping a GridView inside a SingleChildScrollView
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+
+                padding: const EdgeInsets.only(top: 24, left: 20, right: 20),
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 20,
+                  mainAxisSpacing: 20,
+                  childAspectRatio: 170 / 200,
+                ),
+                children: [
+                  for (int i = 0; i < 5; i++)
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child: Image.asset(
+                            'assets/images/places/heritage-park-historical-village.jpg',
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ],
+                    )
                 ],
               ),
             ],
