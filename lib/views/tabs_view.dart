@@ -1,7 +1,7 @@
 import 'package:canoo/providers/bottom_navigator_provider.dart';
 import 'package:canoo/providers/page_controller_provider.dart';
 import 'package:canoo/services/navigation_service.dart';
-import 'package:canoo/views/explore/explore_view.dart';
+import 'package:canoo/views/explore/explore_places_view.dart';
 import 'package:canoo/views/favourites/favourites_view.dart';
 import 'package:canoo/views/home/home_view.dart';
 import 'package:canoo/views/manual_check_in/manual_check_in_view.dart';
@@ -53,11 +53,11 @@ class _TabsViewState extends ConsumerState<TabsView> with SingleTickerProviderSt
 
     _views = [
       const HomeView(),
-      const ExploreView(),
+      const ExplorePlacesView(),
       ManualCheckInView(),
       const FavouritesView(),
       const MoreView(),
-      const ExploreView(),
+      const ExplorePlacesView(),
       const Text('Second tab'),
       const Text('Thirth tab'),
     ];

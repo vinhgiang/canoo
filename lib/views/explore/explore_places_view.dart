@@ -2,11 +2,20 @@ import 'package:canoo/directories/category.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class ExploreView extends StatelessWidget {
-  const ExploreView({super.key});
+class ExplorePlacesView extends StatefulWidget {
+  const ExplorePlacesView({super.key});
+
+  @override
+  State<ExplorePlacesView> createState() => _ExplorePlacesViewState();
+}
+
+class _ExplorePlacesViewState extends State<ExplorePlacesView> with AutomaticKeepAliveClientMixin {
+  @override
+  bool get wantKeepAlive => true;
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
