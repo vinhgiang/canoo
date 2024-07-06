@@ -1,6 +1,9 @@
 import 'package:canoo/directories/category.dart';
+import 'package:canoo/theme/app_theme.dart';
+import 'package:canoo/views/explore/widgets/places_filter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ExplorePlacesView extends StatefulWidget {
   const ExplorePlacesView({super.key});
@@ -12,6 +15,17 @@ class ExplorePlacesView extends StatefulWidget {
 class _ExplorePlacesViewState extends State<ExplorePlacesView> with AutomaticKeepAliveClientMixin {
   @override
   bool get wantKeepAlive => true;
+
+  void _showFilter(BuildContext context) {
+    showModalBottomSheet(
+      useSafeArea: true,
+      isScrollControlled: true,
+      context: context,
+      showDragHandle: true,
+      backgroundColor: AppTheme.getModalBackgroundColor(context),
+      builder: (ctx) => const PlacesFilter(),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +39,25 @@ class _ExplorePlacesViewState extends State<ExplorePlacesView> with AutomaticKee
             padding: const EdgeInsets.fromLTRB(20, 28, 20, 10),
             child: Row(
               children: [
-                const SizedBox(width: 60),
+                InkWell(
+                  onTap: () => _showFilter(context),
+                  child: Container(
+                    padding: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        color: Colors.grey,
+                        width: 1,
+                      ),
+                    ),
+                    child: const Icon(
+                      FontAwesomeIcons.sliders,
+                      size: 16,
+                      color: Colors.grey,
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 25),
                 FilledButton(
                   onPressed: () {},
                   child: const Text('All'),

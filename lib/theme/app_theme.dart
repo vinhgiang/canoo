@@ -12,14 +12,6 @@ class AppTheme {
         );
   }
 
-  // this is the same as the default style, not large. can be fixed
-  static ButtonStyle getPrimaryButtonLargeStyle(BuildContext context) {
-    return ElevatedButton.styleFrom(
-      padding: const EdgeInsets.fromLTRB(26, 14, 26, 14),
-      textStyle: Theme.of(context).textTheme.titleSmall,
-    );
-  }
-
   static ButtonTextStyle getRadioButtonStyle(BuildContext context) {
     return ButtonTextStyle(
       selectedColor: Theme.of(context).colorScheme.onPrimary,
@@ -40,6 +32,10 @@ class AppTheme {
     return Theme.of(context).textTheme.labelSmall!.copyWith(
           color: Theme.of(context).colorScheme.secondary,
         );
+  }
+
+  static Color getModalBackgroundColor(BuildContext context) {
+    return const Color.fromARGB(255, 17, 17, 17);
   }
 
   static ThemeData get darkTheme {
