@@ -39,7 +39,6 @@ class _PlacesFilterState extends State<PlacesFilter> {
                         children: [
                           Switch(
                             value: _isOnlyAccessibleVenues,
-                            activeColor: Colors.red,
                             onChanged: (bool value) {
                               setState(() {
                                 _isOnlyAccessibleVenues = value;

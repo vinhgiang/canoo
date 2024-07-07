@@ -222,6 +222,23 @@ class AppTheme {
           borderRadius: BorderRadius.circular(0),
         ),
       ),
+      switchTheme: SwitchThemeData(
+        thumbColor: MaterialStateProperty.resolveWith<Color>((Set<MaterialState> states) {
+          if (states.contains(MaterialState.selected)) {
+            return Colors.yellow;
+          }
+          return Colors.grey;
+        }),
+        trackColor: MaterialStateProperty.resolveWith<Color>((Set<MaterialState> states) {
+          return const Color.fromARGB(0, 0, 0, 0);
+        }),
+        trackOutlineColor: MaterialStateProperty.resolveWith<Color>((Set<MaterialState> states) {
+          if (states.contains(MaterialState.selected)) {
+            return Colors.yellow;
+          }
+          return Colors.grey;
+        }),
+      ),
     );
   }
 }
