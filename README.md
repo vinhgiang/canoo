@@ -1,16 +1,9 @@
 # canoo
 
-A new Flutter project.
+Celebrate your new home.
 
-## Getting Started
+## Introduction
 
-This project is a starting point for a Flutter application.
+Canoo is your VIP Access Pass. With free entry to over 2000 partner experiences, exclusive deals and access to some of the hottest events, Canoo is your companion as you make Canada your new home.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Canoo is funded in part by Immigration, Refugees and Citizenship Canada (IRCC). We thank them for their continued support of our program.
