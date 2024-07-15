@@ -38,6 +38,17 @@ class AppTheme {
     return const Color.fromARGB(255, 17, 17, 17);
   }
 
+  static ButtonStyle getInactiveFilledButtonStyle(BuildContext context) {
+    return Theme.of(context).filledButtonTheme.style!.copyWith(
+          backgroundColor: MaterialStateProperty.all<Color>(
+            Colors.white10,
+          ),
+          foregroundColor: MaterialStateProperty.all<Color>(
+            Colors.grey,
+          ),
+        );
+  }
+
   static ThemeData get darkTheme {
     return ThemeData(
       brightness: Brightness.dark,

@@ -1,6 +1,13 @@
 import 'package:canoo/directories/category.dart';
+import 'package:canoo/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
+enum EventFilter {
+  thisWeek,
+  nextWeek,
+  all,
+}
 
 class ExploreEventsView extends StatefulWidget {
   const ExploreEventsView({super.key});
@@ -13,14 +20,54 @@ class _ExploreEventsViewState extends State<ExploreEventsView> with AutomaticKee
   @override
   bool get wantKeepAlive => true;
 
+  EventFilter _eventFilter = EventFilter.thisWeek;
+
+  void _setEventFilter(EventFilter filter) {
+    setState(() {
+      _eventFilter = filter;
+    });
+  }
+
+  ButtonStyle _getEventFilterBtnStyle(EventFilter filter) {
+    if (_eventFilter == filter) {
+      return Theme.of(context).filledButtonTheme.style!;
+    }
+    return AppTheme.getInactiveFilledButtonStyle(context);
+  }
+
   @override
   Widget build(BuildContext context) {
     super.build(context);
+
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 28, 20, 10),
+            child: Row(
+              children: [
+                FilledButton(
+                  onPressed: () => _setEventFilter(EventFilter.thisWeek),
+                  style: _getEventFilterBtnStyle(EventFilter.thisWeek),
+                  child: const Text('This week'),
+                ),
+                const SizedBox(width: 5),
+                FilledButton(
+                  onPressed: () => _setEventFilter(EventFilter.nextWeek),
+                  style: _getEventFilterBtnStyle(EventFilter.nextWeek),
+                  child: const Text('Next week'),
+                ),
+                const SizedBox(width: 5),
+                FilledButton(
+                  onPressed: () => _setEventFilter(EventFilter.all),
+                  style: _getEventFilterBtnStyle(EventFilter.all),
+                  child: const Text('All'),
+                ),
+              ],
+            ),
+          ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
