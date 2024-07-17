@@ -1,5 +1,8 @@
+import 'package:canoo/providers/events_filter_provider.dart';
 import 'package:canoo/theme/app_theme.dart';
+import 'package:canoo/view_models/explore_events_view_model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 enum EventFilter {
   thisWeek,
@@ -7,24 +10,16 @@ enum EventFilter {
   all,
 }
 
-class EventsFilter extends StatefulWidget {
+class EventsFilter extends ConsumerStatefulWidget {
   const EventsFilter({super.key});
 
   @override
-  State<StatefulWidget> createState() => _EventsFilterState();
+  ConsumerState<EventsFilter> createState() => _EventsFilterState();
 }
 
-class _EventsFilterState extends State<EventsFilter> {
-  EventFilter _eventFilter = EventFilter.all;
-
-  void _setEventFilter(EventFilter filter) {
-    setState(() {
-      _eventFilter = filter;
-    });
-  }
-
-  ButtonStyle _getEventFilterBtnStyle(EventFilter filter) {
-    if (_eventFilter == filter) {
+class _EventsFilterState extends ConsumerState<EventsFilter> {
+  ButtonStyle _getEventFilterBtnStyle(EventFilter filter, EventFilter currentFilter) {
+    if (currentFilter == filter) {
       return Theme.of(context).filledButtonTheme.style!;
     }
     return AppTheme.getInactiveFilledButtonStyle(context);
@@ -32,25 +27,28 @@ class _EventsFilterState extends State<EventsFilter> {
 
   @override
   Widget build(BuildContext context) {
+    final exploreEventsViewModel = ExploreEventsViewModel(ref);
+    final currentFilter = ref.watch(eventsFilterProvider);
+
     return Padding(
       padding: const EdgeInsets.fromLTRB(20, 28, 20, 10),
       child: Row(
         children: [
           FilledButton(
-            onPressed: () => _setEventFilter(EventFilter.thisWeek),
-            style: _getEventFilterBtnStyle(EventFilter.thisWeek),
+            onPressed: () => exploreEventsViewModel.setEventFilter(EventFilter.thisWeek),
+            style: _getEventFilterBtnStyle(EventFilter.thisWeek, currentFilter),
             child: const Text('This week'),
           ),
           const SizedBox(width: 5),
           FilledButton(
-            onPressed: () => _setEventFilter(EventFilter.nextWeek),
-            style: _getEventFilterBtnStyle(EventFilter.nextWeek),
+            onPressed: () => exploreEventsViewModel.setEventFilter(EventFilter.nextWeek),
+            style: _getEventFilterBtnStyle(EventFilter.nextWeek, currentFilter),
             child: const Text('Next week'),
           ),
           const SizedBox(width: 5),
           FilledButton(
-            onPressed: () => _setEventFilter(EventFilter.all),
-            style: _getEventFilterBtnStyle(EventFilter.all),
+            onPressed: () => exploreEventsViewModel.setEventFilter(EventFilter.all),
+            style: _getEventFilterBtnStyle(EventFilter.all, currentFilter),
             child: const Text('All'),
           ),
         ],
