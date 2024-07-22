@@ -1,5 +1,4 @@
 import 'package:canoo/directories/category.dart';
-import 'package:canoo/views/explore/widgets/events_filter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

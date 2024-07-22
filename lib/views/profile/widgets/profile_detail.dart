@@ -1,3 +1,4 @@
+import 'package:canoo/views/profile/widgets/profile_name.dart';
 import 'package:flutter/material.dart';
 
 class ProfileDetail extends StatelessWidget {
@@ -12,7 +13,7 @@ class ProfileDetail extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('XUAN MAI NGO', style: Theme.of(context).textTheme.labelLarge),
+              const ProfileName(),
               const SizedBox(height: 5),
               Text('Member since 22 Apr 2024', style: Theme.of(context).textTheme.labelSmall),
               const SizedBox(height: 35),
