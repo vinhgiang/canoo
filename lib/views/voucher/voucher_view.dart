@@ -1,4 +1,3 @@
-import 'package:canoo/providers/children_count_provider.dart';
 import 'package:canoo/services/navigation_service.dart';
 import 'package:canoo/theme/app_theme.dart';
 import 'package:canoo/view_models/voucher_view_model.dart';
@@ -12,7 +11,7 @@ class VoucherView extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     DateTime now = DateTime.now();
-    int numChildren = ref.watch(childrenCountProvider);
+    int numChildren = VoucherViewModel(ref).numChildren;
     String profileName = VoucherViewModel(ref).profileName;
 
     return Scaffold(
