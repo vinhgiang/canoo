@@ -1,6 +1,7 @@
 import 'package:canoo/providers/children_count_provider.dart';
 import 'package:canoo/services/navigation_service.dart';
 import 'package:canoo/theme/app_theme.dart';
+import 'package:canoo/view_models/voucher_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
@@ -12,6 +13,7 @@ class VoucherView extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     DateTime now = DateTime.now();
     int numChildren = ref.watch(childrenCountProvider);
+    String profileName = VoucherViewModel(ref).profileName;
 
     return Scaffold(
       appBar: AppBar(
@@ -73,7 +75,7 @@ class VoucherView extends ConsumerWidget {
                                   style: AppTheme.getVoucherTitleStyle(context),
                                 ),
                                 Text(
-                                  'XUAN MAI NGO',
+                                  profileName,
                                   style: AppTheme.getVoucherValueStyle(context),
                                 ),
                                 const SizedBox(height: 25),
