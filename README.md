@@ -13,3 +13,5 @@ Canoo is funded in part by Immigration, Refugees and Citizenship Canada (IRCC). 
 Canoo is your VIP Access Pass to the best of what Canada has to offer. Download our mobile app and get all this and more!
 
 ## How to install
+
+## How to use
