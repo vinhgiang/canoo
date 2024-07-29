@@ -1,6 +1,7 @@
 import 'package:canoo/directories/category.dart';
 import 'package:canoo/theme/app_theme.dart';
 import 'package:canoo/views/explore/widgets/places_filter.dart';
+import 'package:canoo/views/widgets/grid_places.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -120,65 +121,7 @@ class _ExplorePlacesViewState extends State<ExplorePlacesView> with AutomaticKee
                   )
                 ],
               ),
-              GridView(
-                // these 2 properties are important when wrapping a GridView inside a SingleChildScrollView
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-
-                padding: const EdgeInsets.only(top: 24, left: 20, right: 20),
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 20,
-                  mainAxisSpacing: 20,
-                  // the aspect ratio here applies to the whole item, not only the image
-                  childAspectRatio: MediaQuery.of(context).size.width * 0.433 / 280,
-                ),
-                children: [
-                  for (int i = 0; i < 4; i++)
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Expanded(
-                          child: Stack(
-                            children: [
-                              SizedBox(
-                                width: double.infinity,
-                                height: double.infinity,
-                                child: Image.asset(
-                                  'assets/images/places/heritage-park-historical-village.jpg',
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                              Positioned(
-                                top: 0,
-                                left: 0,
-                                child: Container(
-                                  width: 30,
-                                  height: 30,
-                                  padding: const EdgeInsets.all(5),
-                                  color: Colors.green,
-                                  child: CategoryIcon.icons[Category.train]!,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                        const Text('TELUS Spark Science Centre'),
-                        const SizedBox(height: 10),
-                        Row(
-                          children: [
-                            const Icon(Icons.location_on_rounded),
-                            const SizedBox(width: 2),
-                            Text(
-                              'Calgary, AB',
-                              style: Theme.of(context).textTheme.bodySmall,
-                            )
-                          ],
-                        ),
-                      ],
-                    )
-                ],
-              ),
+              const GridPlaces(),
               const SizedBox(height: 55),
               for (int i = 0; i < 5; i++)
                 Padding(
