@@ -80,7 +80,7 @@ class _ExploreEventsViewState extends State<ExploreEventsView> with AutomaticKee
                   )
                 ],
               ),
-              const GridPlaces(),
+              const PlacesGrid(),
               const SizedBox(height: 55),
               for (int i = 0; i < 5; i++)
                 Padding(

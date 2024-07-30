@@ -1,8 +1,8 @@
 import 'package:canoo/directories/category.dart';
 import 'package:flutter/material.dart';
 
-class GridPlaces extends StatelessWidget {
-  const GridPlaces({super.key});
+class PlacesGrid extends StatelessWidget {
+  const PlacesGrid({super.key});
 
   @override
   Widget build(BuildContext context) {
