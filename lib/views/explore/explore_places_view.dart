@@ -1,7 +1,7 @@
 import 'package:canoo/directories/category.dart';
 import 'package:canoo/theme/app_theme.dart';
 import 'package:canoo/views/explore/widgets/places_filter.dart';
-import 'package:canoo/views/widgets/grid_places.dart';
+import 'package:canoo/views/widgets/places_grid.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

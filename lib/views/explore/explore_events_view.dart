@@ -1,6 +1,6 @@
 import 'package:canoo/directories/category.dart';
 import 'package:canoo/views/explore/widgets/events_filter.dart';
-import 'package:canoo/views/widgets/grid_places.dart';
+import 'package:canoo/views/widgets/places_grid.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
