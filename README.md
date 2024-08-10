@@ -19,3 +19,5 @@ Canoo is your VIP Access Pass to the best of what Canada has to offer. Download 
 ## How to use
 
 ## Privacy policy
+
+## Term and condition
