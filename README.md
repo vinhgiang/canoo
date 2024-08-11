@@ -14,6 +14,8 @@ Canoo is your VIP Access Pass to the best of what Canada has to offer. Download 
 
 ## Design and flow
 
+### Figma 
+
 ## How to install
 
 ## How to use
