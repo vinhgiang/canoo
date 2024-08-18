@@ -1,4 +1,4 @@
-# canoo
+# Canoo
 
 Celebrate your new home.
 
